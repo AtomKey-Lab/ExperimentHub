@@ -1,0 +1,11 @@
+.navbar2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 250px;
+    height: 10vh;
+    font-size: 14px;
+}
+.navbar2 h1{
+    cursor: pointer;
+}

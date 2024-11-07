@@ -1,38 +1,22 @@
 import React from "react";
+import footerConfig from "../../config/footer";
 import "./footer.css"; 
 
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <div className="container">
-        <ul className="footer-links">
-          <li className="footer-link-item">
-            <a href="#" className="footer-link">
-              About
+const Footer = () => (
+  <footer className="footer">
+    <div className="container">
+      <ul className="footer-links">
+        {footerConfig.links.map((link, index) => (
+          <li key={index} className="footer-link-item">
+            <a href={link.href} className="footer-link">
+              {link.label}
             </a>
           </li>
-          <li className="footer-link-item">
-            <a href="#" className="footer-link">
-              Contact
-            </a>
-          </li>
-          <li className="footer-link-item">
-            <a href="#" className="footer-link">
-              Privacy Policy
-            </a>
-          </li>
-          <li className="footer-link-item">
-            <a href="#" className="footer-link">
-              Terms of Service
-            </a>
-          </li>
-        </ul>
-        <p className="footer-text">
-          Copyright 2024 experimenthub. All rights reserved.
-        </p>
-      </div>
-    </footer>
-  );
-};
+        ))}
+      </ul>
+      <p className="footer-text">{footerConfig.text}</p>
+    </div>
+  </footer>
+);
 
 export default Footer;
