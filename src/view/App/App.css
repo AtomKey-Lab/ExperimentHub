@@ -6,11 +6,51 @@
     align-items: end;
 }
 
+.app-body-div1 {
+    height: 80vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20PX;
+    background-color: white;
+    color: black;
+}
+
 .App-background {
     height: 80vh;
-    width: 80vw;
+    width: 70vw;
     background-image: url('https://i.pinimg.com/564x/ab/72/fd/ab72fd31b4ea97ae5195954f8589db59.jpg');
     background-size: cover;
     background-position: end;
     background-repeat: no-repeat;
+}
+
+.App-h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.App-div-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    height: 300px;
+    max-width: 200px;
+}
+
+.App-images {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0px 100px;
+}
+
+.App-img {
+    height: 200px;
 }
