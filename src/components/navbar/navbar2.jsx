@@ -26,7 +26,7 @@ function Navbar2() {
           <h1
             key={index}
             onClick={() => {
-              console.log("Setting current page to:", item.name); // Debugging log
+              console.log("Setting current page to:", item.name);
               setCurrentpage(item.name);
             }}
             className={currentpage === item.name ? 'active' : ''}
