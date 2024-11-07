@@ -1,0 +1,16 @@
+.App-body {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.App-background {
+    height: 80vh;
+    width: 80vw;
+    background-image: url('https://i.pinimg.com/564x/ab/72/fd/ab72fd31b4ea97ae5195954f8589db59.jpg');
+    background-size: cover;
+    background-position: end;
+    background-repeat: no-repeat;
+}
