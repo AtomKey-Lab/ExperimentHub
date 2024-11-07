@@ -1,0 +1,13 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    z-index: 100;
+}
+
+.loading-gif {
+    margin-top: 200px;
+    height: 50vw;
+    z-index: 1;
+}
