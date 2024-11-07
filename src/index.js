@@ -3,6 +3,7 @@ import Simulation from './view/simulation/simulation'
 import About from "./view/about/about"
 import Login from "./view/login/login"
 
+
 import reactDom from "react-dom/client"
 import { BrowserRouter,Route,Routes } from "react-router-dom"
 
