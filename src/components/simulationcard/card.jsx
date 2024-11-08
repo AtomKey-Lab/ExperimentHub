@@ -12,7 +12,7 @@ function Card() {
           <div className='card-text'>
             <h1>{item.title}</h1>
             <h3>{item.description}</h3>
-            <button className='card-button'><Link className='card-link' to={item.link }>{item.buttonText}</Link></button>
+            <button className='card-button'><Link className='card-link' to={item.link }   >{item.buttonText}</Link></button>
           </div>
         </div>
       ))}
