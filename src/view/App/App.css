@@ -16,7 +16,9 @@
     background-color: white;
     color: black;
 }
-
+.app-body-div1 h1{
+    text-align: center;
+}
 .App-background {
     height: 80vh;
     width: 70vw;
