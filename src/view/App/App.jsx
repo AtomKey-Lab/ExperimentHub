@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <div className='App-body'>
         <div className='app-body-div1'>
-          <h1>Home page</h1>
+          <h1>Explore interactive science experiments in our Virtual Lab!</h1>
 
         </div>
         <div>
@@ -19,7 +19,7 @@ function App() {
         </div>
       </div>
 
-      <h1 className='App-h1'>what is virtual lab ?</h1>
+      <h1 className='App-h1'>What is virtual lab ?</h1>
       <div className='App-images'>
         {
           imagesData.map((item, index) => (
