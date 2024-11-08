@@ -16,6 +16,7 @@ root.render(
         <Route path="/Login" element={<Login/>}/>
         <Route path="/Gravitation" element={<Gravitation/>}/>
         <Route path="/Chemestry" element={<Chemestry/>}/>
+        
     </Routes>
     </BrowserRouter>
 )
