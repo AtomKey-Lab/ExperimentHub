@@ -13,8 +13,8 @@ function Footer() {
                 <div className="footer-section">
                     <h4>Need to Study</h4>
                     <ul>
-                        <li><a href='/chemistry'>Chemistry Instruments</a></li>
-                        <li><a href='/physic'>Physics Instruments</a></li>
+                        <li><a href="/chemistry">Chemistry Instruments</a></li>
+                        <li><a href="/physic">Physics Instruments</a></li>
                     </ul>
                 </div>
 
