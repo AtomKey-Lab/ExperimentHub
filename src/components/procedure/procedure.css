@@ -1,0 +1,56 @@
+.procedure-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .procedure-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .experiment-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .experiment-name {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .experiment-color {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .experiment-steps-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .experiment-steps {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+  
+  .step-item {
+    margin-bottom: 8px;
+  }
+  
+  .experiment-result {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #444;
+  }
+  

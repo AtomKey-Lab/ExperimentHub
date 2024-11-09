@@ -1,0 +1,82 @@
+/* Container styling */
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section styling */
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .chemistry-section, .gravitation-section {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    color: #007acc;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  /* List styling */
+  .list {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .list-item {
+    margin-bottom: 8px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Fallback text styling */
+  .fallback-text {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #777;
+  }
+  
+  /* Emphasized text */
+  em {
+    font-style: italic;
+    color: #555;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .app-container {
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 1.6rem;
+    }
+  
+    .subtitle {
+      font-size: 1.1rem;
+    }
+  }
+  
