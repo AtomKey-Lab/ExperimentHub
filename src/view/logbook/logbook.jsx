@@ -62,6 +62,7 @@ const LogEntryForm = ({ onAddEntry }) => {
   };
 
   return (
+    <div className='logBook-body'>
     <div className='log-container'>
     <form onSubmit={handleSubmit} className="log-form">
       <h3>Experiment Details</h3>
@@ -87,8 +88,9 @@ const LogEntryForm = ({ onAddEntry }) => {
       <textarea placeholder="Result Summary" value={conclusion} onChange={(e) => setConclusion(e.target.value)} />
       <textarea placeholder="Reflection and Improvements" value={reflection} onChange={(e) => setReflection(e.target.value)} />
 
-      <button type="submit">Save Log Entry</button>
+      <button type="submit"className='button-logBook'>Save Log Entry</button>
     </form>
+    </div>
     </div>
   );
 };
