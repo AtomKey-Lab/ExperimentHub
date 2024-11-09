@@ -4,7 +4,9 @@ import Navbar from '../../components/navbar/navbar'
 import Footer from '../../components/footer/footer'
 function login() {
   return (
-    <div> <Navbar/>
+    <div> 
+      <Navbar/>
+
         <Footer/></div>
   )
 }
