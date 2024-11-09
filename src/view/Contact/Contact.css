@@ -1,13 +1,11 @@
 .bgbody {
-    background-image: url('/src/Assets/contact.png');
+   
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+   
     
   }
   .contact-page{
@@ -19,28 +17,27 @@
   }
   
   .contact-Box {
-    color: white;
+    color: black;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0.9px 0.9px 10px white;
+  box-shadow: 0.9px 0.9px 10px black;
   width: 90%; 
   max-width: 500px; 
   height: 50vh; 
-  background: rgba(0, 0, 0, 0.6);
+ 
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto; /* Centers horizontally */
   }
   .get-Box{
-    color: white;
+    color: black;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0.9px 0.9px 10px white;
+    box-shadow: 0.9px 0.9px 10px black;
     width: 90%; 
     max-width: 700px; 
     height: 20vh; 
-    background: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +52,7 @@
   }
   
   .header {
-    color: white;
+    color: black;
     margin-bottom: 10px;
   }
   
@@ -72,14 +69,14 @@
   .contact-form input, .contact-form textarea {
     padding: 8px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     border-radius: 4px;
   }
   
   .contact-form button {
     padding: 10px;
     background-color: #007bff;
-    color: #fff;
+    color: black;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -92,7 +89,7 @@
   /* Get in Touch Section */
   .get-in-touch {
     text-align: center;
-    color: white;
+    color: black;
   }
   
   .contact-info {
@@ -120,6 +117,6 @@
   .contact-box p {
     margin: 0;
     font-size: 16px;
-    color: white;
+    color: black;
   }
   
