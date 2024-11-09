@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./Contact.css";
 import Navbar from '../../components/navbar/navbar'
+import Footer from '../../components/footer/footer'
 
 function Contact() {
   const [name, setName] = useState('');
@@ -81,6 +82,7 @@ function Contact() {
     </div>
     </div>
     </div>
+    <Footer/>
     </div>
   );
 }
