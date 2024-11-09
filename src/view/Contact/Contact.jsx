@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Contact.css";
+import Navbar from '../../components/navbar/navbar'
 
 function Contact() {
   const [name, setName] = useState('');
@@ -18,6 +19,8 @@ function Contact() {
   };
 
   return (
+    <div>
+    <Navbar/>
     <div className='bgbody'>
     <div className="contact-page">
     <h2 className='header'>Contact Us</h2>
@@ -75,6 +78,7 @@ function Contact() {
           </div>
         </div>
       </div>
+    </div>
     </div>
     </div>
     </div>
