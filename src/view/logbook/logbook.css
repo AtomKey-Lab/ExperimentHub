@@ -1,7 +1,9 @@
 .log-container{
    display: flex;
    justify-content: center;
+ 
 }  
+
   h1 {
     text-align: center;
   }
@@ -28,7 +30,7 @@
     border-radius: 4px;
   }
   
-  button {
+.button-logBook {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -39,7 +41,7 @@
     margin-top: 10px;
   }
   
-  button:hover {
+.button-logBook:hover {
     background-color: #45a049;
   }
   
