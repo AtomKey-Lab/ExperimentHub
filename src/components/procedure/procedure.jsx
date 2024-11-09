@@ -7,7 +7,7 @@ function Procedure() {
   return (
     <div>
       {/* Conditional rendering based on the URL */}
-      {path.includes('chemistry') && <h1>Chemistry</h1>}
+      {path.includes('chemestry') && <h1>Chemistry</h1>}
       {path.includes('gravitation') && <h1>Gravitation</h1>}
       
       <p>This is the main content of the Procedure component.</p>
