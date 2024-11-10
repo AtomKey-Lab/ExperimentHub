@@ -36,7 +36,7 @@
   }
   
   .answer-section button {
-    background-color: #4CAF50;
+    background-color: #3498db;
     color: white;
     padding: 10px;
     border: none;
@@ -47,7 +47,7 @@
   }
   
   .answer-section button:hover {
-    background-color: #45a049;
+    background-color: #3ca4e9;
   }
   
   .score-section {
