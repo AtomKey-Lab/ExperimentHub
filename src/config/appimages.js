@@ -1,7 +1,7 @@
 export const imagesData = [
     {
       "img": "https://praxilabs.com/content/video/NewPhysicsPage/AllIcons_01.png",
-      "description": "3D Immersive Interaction"
+      "description": "Immersive Interaction"
     },
     {
       "img": "https://praxilabs.com/content/video/NewPhysicsPage/AllIcons_02.png",
