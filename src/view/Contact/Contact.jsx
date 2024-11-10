@@ -1,86 +1,56 @@
-import React, { useState } from 'react';
-import "./Contact.css";
-import Navbar from '../../components/navbar/navbar'
+import React from 'react';
+import './Contact.css';
+import contactImage from '../../Assets/contact3.jpg';
 import Footer from '../../components/footer/footer'
+import Navbar from '../../components/navbar/navbar'
 
 function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", { name, email, message });
-    alert("Thank you for contacting us!");
-
-    // Clear the form fields
-    setName('');
-    setEmail('');
-    setMessage('');
-  };
-
   return (
     <div>
-    <Navbar/>
-    <div className='bgbody'>
-    <div className="contact-page">
-    <h2 className='header'>Contact Us</h2>
-      {/* Contact Us Form Section */}
-      <div className='contact-Box'>
-      <div className="contact-form">
-      
-        <form onSubmit={handleSubmit}>
-          <label>Name:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-
-          <label>Message:</label>
-          <textarea
-            rows="4"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          ></textarea>
-
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-      </div>
-
-      {/* Get in Touch Section with Separate Boxes in a Row */}
-
-      <div className="get-in-touch">
-        <h2>Get in Touch</h2>
-        <div className='get-Box'>
-        <div className="contact-info">
-          <div className="contact-box">
-            <h3>Address</h3>
-            <p>123 Main Street, Cityville, ST 12345</p>
+         <Navbar/>
+    <div className='body'>
+      <div className="contact-container">
+        <div className="contact-content">
+          {/* Contact Form Section */}
+          <div className="contact-form">
+            <h2>Contact Us</h2>
+            <div className="input-field">
+              <input type="text" placeholder="Name" />
+            </div>
+            <div className="input-field">
+              <input type="email" placeholder="Email" />
+            </div>
+            <div className="input-field">
+              <textarea placeholder="Message" rows="4"></textarea>
+            </div>
+            <button className="send-button">Send Message</button>
           </div>
-          <div className="contact-box">
-            <h3>Phone</h3>
-            <p>+1 (555) 123-4567</p>
+
+          {/* Contact Image */}
+          <div className="contact-image">
+            <img src={contactImage} alt="Contact illustration" />
           </div>
-          <div className="contact-box">
-            <h3>Email</h3>
-            <p>info@example.com</p>
+        </div>
+
+        {/* Get in Touch Section */}
+        <div className="get-in-touch">
+          <h2>Get in Touch</h2>
+          <div className="contact-info">
+            <div className="contact-box">
+              <h3>Address</h3>
+              <p>123 Main Street, Cityville, ST 12345</p>
+            </div>
+            <div className="contact-box">
+              <h3>Phone</h3>
+              <p>+1 (555) 123-4567</p>
+            </div>
+            <div className="contact-box">
+              <h3>Email</h3>
+              <p>info@example.com</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
     <Footer/>
     </div>
