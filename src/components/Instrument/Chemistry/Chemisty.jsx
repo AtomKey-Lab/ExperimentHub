@@ -12,6 +12,7 @@ function Chemisty() {
       
 
       {/* Three cart items outside the container */}
+      <h1>Chemistry<span className='Inst'> Instrument </span>Lab</h1>
       <div className="cart-items">
         <div className="cart-item">
           <img 
