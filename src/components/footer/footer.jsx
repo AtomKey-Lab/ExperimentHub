@@ -1,5 +1,9 @@
 import React from 'react';
 import './footer.css';
+import Facebook from '../../Assets/facebook (2).png'
+import Instagram from '../../Assets/instagram (1).png'
+import Twitter from '../../Assets/twitter.png'
+
 
 function Footer() {
     return (
@@ -7,7 +11,7 @@ function Footer() {
             <div className="footer-content">
                 <div className="footer-section">
                     <h4>About Virtual Lab</h4>
-                    <p>Providing interactive simulations for Physics and Chemistry, making science more accessible and fun for students.</p>
+                    <p>Virual lab providing interactive simulations for Physics and Chemistry, making science more accessible and fun for students.</p>
                 </div>
 
                 <div className="footer-section">
@@ -37,9 +41,9 @@ function Footer() {
                 <div className="footer-section">
                     <h4>Follow Us</h4>
                     <div className="social-icons">
-                        <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
-                        <a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
-                        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" /></a>
+                        <a href="#"><img src={Facebook} alt="Facebook" /></a>
+                        <a href="#"><img src={Instagram} alt="Twitter" /></a>
+                        <a href="#"><img src={Twitter} alt="LinkedIn" /></a>
                     </div>
                 </div>
             </div>
