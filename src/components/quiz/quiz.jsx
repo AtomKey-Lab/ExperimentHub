@@ -49,6 +49,7 @@ const Quiz = () => {
               <button
                 key={index}
                 onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
+                
               >
                 {answerOption.answerText}
               </button>
