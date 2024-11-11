@@ -2,16 +2,19 @@ import React from 'react';
 import './about.css';
 import Navbar from '../../components/navbar/navbar'
 import Footer from '../../components/footer/footer'
+import Background from '../../components/background/Background';
+import Loading from '../../Assets/loading.gif'
 
 function Cart() {
   return (
     <div>
       <Navbar/>
+      <Background />
       <div className="cart-container">
-        <h1 className="welcome-text">Welcome to Virtual Lab</h1>
-        <p className="quote">"Discover the Wonders of Science with Every Experiment"</p>
+        <h1 className="welcome-text">Welcome to AtomKey Lab 🔬</h1>
+        <p className="quote-about">"Discover the Wonders of Science with Every Experiment"</p>
         <img 
-          src="https://www.shutterstock.com/shutterstock/videos/1099628097/thumb/10.jpg?ip=x480" 
+          src={Loading}
           alt="Virtual Lab" 
           className="lab-image-head" 
         />
@@ -25,8 +28,8 @@ function Cart() {
             alt="Item 1" 
             className="lab-image" 
           />
-           <h3>Immersive Intractive</h3>
-          <p>Virtual labs provide interactive, hands-on experiences that mimic real-life lab settings. This immersion makes learning more engaging and allows students to grasp complex concepts better through active involvement rather than passive observation.</p>
+           <h3 className='cart-item-h3'>Immersive Intractive</h3>
+
         </div>
         <div className="cart-item">
           <img 
@@ -34,8 +37,8 @@ function Cart() {
             alt="Item 2" 
             className="lab-image" 
           />
-          <h3>24/7 Availability</h3>
-          <p>Round-the-clock availability ensures that students can access labs whenever they are ready to learn, accommodating different time zones and schedules. This unrestricted access is ideal for self-paced learning.</p>
+          <h3 className='cart-item-h3'>24/7 Availability</h3>
+          
         </div>
         <div className="cart-item">
           <img 
@@ -43,8 +46,8 @@ function Cart() {
             alt="Item 3" 
             className="lab-image" 
           />
-          <h3>Cost effective</h3>
-          <p>Reduced Equipment Costs physical labs require expensive equipment, chemicals, and materials. Virtual labs provide simulations without the need for these, saving costs.</p>
+          <h3 className='cart-item-h3'>Cost effective</h3>
+          
         </div>
         <div className="cart-item">
           <img 
@@ -52,8 +55,8 @@ function Cart() {
             alt="Item 4" 
             className="lab-image" 
           />
-          <h3> Experimentation Without Resource Constraints</h3>
-          <p>Unlimited Trials students can repeat experiments as many times as needed to fully understand the concepts. In physical labs, the limited number of resources often restricts this.</p>
+          <h3 className='cart-item-h3'> Experimentation Without Resource Constraints</h3>
+        
         </div>
         <div className="cart-item">
           <img 
@@ -61,8 +64,8 @@ function Cart() {
             alt="Item 5" 
             className="lab-image" 
           />
-          <h3>Safety</h3>
-          <p>Risk-Free Environment in a physical lab, experiments can sometimes involve hazardous chemicals, high temperatures, or dangerous machinery. Virtual labs offer a safe environment for students to experiment without the risk of injury or accidents.</p>
+          <h3 className='cart-item-h3'>Safety</h3>
+         
         </div>
         <div className="cart-item">
           <img 
@@ -70,8 +73,8 @@ function Cart() {
             alt="Item 6" 
             className="lab-image" 
           />
-          <h3>AnyTime, Anywhere</h3>
-          <p>Unlike physical labs, virtual labs are accessible 24/7 from any location, making it easier for students to learn at their own pace and on their own schedule. This flexibility is particularly beneficial for remote learners or those with limited access to physical lab resources.</p>
+          <h3 className='cart-item-h3'>AnyTime, Anywhere</h3>
+          
         </div>
       </div>
       <Footer/>

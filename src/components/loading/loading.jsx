@@ -1,13 +1,21 @@
+// ExperimentLoading.js
 import React from 'react';
-import loadingGif from './../../Assets/loading.gif';
 import './loading.css';
 
-const Loading = () => {
+const ExperimentLoading = () => {
   return (
-    <div className="loading-container">
-      <img src={loadingGif} alt="Loading..." className="loading-gif" />
+    <div className="experiment-loading-container">
+      <div className="beaker">
+        <div className="bubbles">
+          <span className="bubble"></span>
+          <span className="bubble"></span>
+          <span className="bubble"></span>
+          <span className="bubble"></span>
+        </div>
+      </div>
+      <p>Experiment in Progress...</p>
     </div>
   );
 };
 
-export default Loading;
+export default ExperimentLoading;

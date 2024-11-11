@@ -24,23 +24,23 @@
   flex-direction: column;
   align-items: center; /* Centers content horizontally */
 }
-.footer-section p{
+.footer-section-p{
   text-align: justify;
 }
 
-.footer-section h4 {
+.footer-section-h4 {
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-.footer-section ul, .footer-section p {
+.footer-section-ul, .footer-section p {
   font-size: 14px;
   line-height: 1.6;
   color: #ecf0f1;
   margin: 5px 0;
 }
 
-.footer-section ul {
+.footer-section-ul {
   list-style-type: none;
   padding: 0;
 }
@@ -72,7 +72,7 @@
   margin-top: 10px;
 }
 
-.social-icons a {
+.social-icons-a {
   display: inline-block;
 }
 

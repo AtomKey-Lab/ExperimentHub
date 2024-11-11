@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { headerdata } from '../../config/headerdata';
-import logo from "./../../Assets/virtulab.png";
+import logo from "./../../Assets/logo.jpg";
 import './navbar.css';
 
 const Header = ({ menuActive }) => {
@@ -16,8 +16,10 @@ const Header = ({ menuActive }) => {
                 src={logo || 'fallback-image.png'}
                 alt="brand logo"
                 className='brand-logo'
+                
               />
             </NavLink>
+            <p className='title'>AtomKey Lab</p>
           </div>
 
           <ul className={`nav-menu ${menuActive ? 'active' : ''}`}>
@@ -46,7 +48,7 @@ const Header = ({ menuActive }) => {
                 className="nav"
                 aria-label="Login"
               >
-                login
+                LogOut
               </NavLink>
             </span>
           </ul>

@@ -1,39 +1,35 @@
-import React from 'react'
-import './App.css'
-import Navbar from '../../components/navbar/navbar'
-import Footer from '../../components/footer/footer'
-import {imagesData} from '../../config/appimages'
+import React from 'react';
+import './App.css';
+import Navbar from '../../components/navbar/navbar';
+import Footer from '../../components/footer/footer';
+import { imagesData } from '../../config/appimages';
+import Background from '../../components/background/Background';  // Import Background component
 
 function App() {
   return (
     <div>
       <Navbar />
       <div className='App-body'>
-        <div className='app-body-div1'>
-          <h1>Explore interactive science experiments in our Virtual Lab!</h1>
-
-        </div>
-        <div>
-          <div className="App-background">
-          </div>
-        </div>
+     
+      <div className="app-body-container">
+        
+      <div className="app-body-div1">
+      <h1 className='home-header'>Welcome To Our Lab</h1>
+        <p className='home-para'>
+          "Explore science like never before! Dive into interactive simulations, conduct experiments, and understand complex concepts with ease. 
+          Our virtual lab offers a hands-on experience in physics and chemistry, designed to enhance your learning journey."
+        </p>
+      </div>
+    </div>
+        {/* Add Background Component */}
+        <Background />
       </div>
 
-      <h1 className='App-h1'>What is virtual lab ?</h1>
-      <div className='App-images'>
-        {
-          imagesData.map((item, index) => (
-            <div key={index} className='App-div-container'>
-              <img src={item.img} alt="" className='App-img' />
-              <p>{item.description}</p>
-            </div>
-          ))
-        }
       
-      </div>
+
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

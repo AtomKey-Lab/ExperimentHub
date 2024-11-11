@@ -1,6 +1,7 @@
 .log-container{
    display: flex;
    justify-content: center;
+ 
    
  
 }  
@@ -17,6 +18,7 @@
     width: 50%;
     border:0.5px solid #608BC1;
     box-shadow: 0px 0px 10px 2px #608BC1;
+    background-color: white;
   }
   
   .log-form h3, .log-entries h3 {
@@ -68,5 +70,8 @@
     margin: 0;
     font-size: 1.2em;
     
+  }
+  .Logbook-title{
+    color: rgb(44, 16, 111);
   }
   

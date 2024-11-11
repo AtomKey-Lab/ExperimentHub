@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './logbook.css';
 import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
+import Background from '../../components/background/Background'; // Add this import
 
 function App() {
   const [logEntries, setLogEntries] = useState([]);
@@ -12,11 +13,12 @@ function App() {
   
   return (
     <div className="App">
+      <Background /> {/* Add Background component here */}
       <Navbar />
-      <h1>Virtual Lab Log Book</h1>
+   
       <LogEntryForm onAddEntry={addLogEntry} />
       <LogEntryList entries={logEntries} />
-      <Footer /> {/* Footer added here */}
+      <Footer />
     </div>
   );
 }
@@ -67,6 +69,7 @@ const LogEntryForm = ({ onAddEntry }) => {
     <div className="logBook-body">
       <div className="log-container">
         <form onSubmit={handleSubmit} className="log-form">
+        <h1 className='Logbook-title'>Virtual Lab Log Book</h1>
           <h3>Experiment Details</h3>
           <input type="text" placeholder="Experiment Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
           <textarea placeholder="Objective" value={objective} onChange={(e) => setObjective(e.target.value)} required />

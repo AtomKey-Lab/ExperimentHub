@@ -64,7 +64,7 @@
 .cart-item:hover{
     transform: scale(1.05); 
 }
-.cart-item h3 {
+.cart-item-h3 {
     margin-bottom: 0;
     padding: 0;
 }

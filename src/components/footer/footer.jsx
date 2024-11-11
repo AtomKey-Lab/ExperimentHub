@@ -10,46 +10,46 @@ function Footer() {
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-section">
-                    <h4>About Virtual Lab</h4>
-                    <p>Virual lab providing interactive simulations for Physics and Chemistry, making science more accessible and fun for students.</p>
+                    <h4 className='footer-section-h4'>About Virtual Lab</h4>
+                    <p className='footer-section-p'>Virual lab providing interactive simulations for Physics and Chemistry, making science more accessible and fun for students.</p>
                 </div>
 
                 <div className="footer-section">
-                    <h4>Need to Study</h4>
-                    <ul>
-                        <li><a href="/chemistry">Chemistry Instruments</a></li>
-                        <li><a href="/physics">Physics Instruments</a></li>
+                    <h4 className='footer-section-h4'>Need to Study</h4>
+                    <ul className='footer-section-ul'>
+                        <li><a href="/chemistry" className='social-icons-a '>Chemistry Instruments</a></li>
+                        <li><a href="/physics" className='social-icons-a '>Physics Instruments</a></li>
                     </ul>
                 </div>
 
                 <div className="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/simulations">Simulations</a></li>
-                        <li><a href="/logbook">Logbook</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                    <h4 className='footer-section-h4'>Quick Links</h4>
+                    <ul className='footer-section-ul'>
+                        <li><a href="/" className='social-icons-a '>Home</a></li>
+                        <li><a href="/simulations" className='social-icons-a '>Simulations</a></li>
+                        <li><a href="/logbook" className='social-icons-a '>Logbook</a></li>
+                        <li><a href="/contact" className='social-icons-a '>Contact</a></li>
                     </ul>
                 </div>
 
                 <div className="footer-section">
-                    <h4>Contact Us</h4>
-                    <p>Email: info@virtuallab.com</p>
-                    <p>Phone: +1 (555) 123-4567</p>
+                    <h4 className='footer-section-h4'>Contact Us</h4>
+                    <p className='footer-section-p'>Email: info@virtuallab.com</p>
+                    <p className='footer-section-p'>Phone: +1 (555) 123-4567</p>
                 </div>
 
                 <div className="footer-section">
-                    <h4>Follow Us</h4>
+                    <h4 className='footer-section-h4'>Follow Us</h4>
                     <div className="social-icons">
-                        <a href="#"><img src={Facebook} alt="Facebook" /></a>
-                        <a href="#"><img src={Instagram} alt="Twitter" /></a>
-                        <a href="#"><img src={Twitter} alt="LinkedIn" /></a>
+                        <a href="#" className='social-icons-a '><img src={Facebook} alt="Facebook" /></a>
+                        <a href="#" className='social-icons-a '><img src={Instagram} alt="Twitter" /></a>
+                        <a href="#" className='social-icons-a '><img src={Twitter} alt="LinkedIn" /></a>
                     </div>
                 </div>
             </div>
 
             <div className="footer-bottom">
-                <p>&copy; 2024 Virtual Lab. All rights reserved.</p>
+                <p className='footer-section-p'>&copy; 2024 Virtual Lab. All rights reserved.</p>
             </div>
         </footer>
     );

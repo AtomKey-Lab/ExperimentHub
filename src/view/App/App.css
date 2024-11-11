@@ -6,26 +6,9 @@
     align-items: end;
 }
 
-.app-body-div1 {
-    height: 80vh;
-    width: 30vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20PX;
-    background-color: white;
-    color: black;
-}
-.app-body-div1 h1{
+
+.app-body-div1-h1{
     text-align: center;
-}
-.App-background {
-    height: 80vh;
-    width: 70vw;
-    background-image: url('https://i.pinimg.com/564x/ab/72/fd/ab72fd31b4ea97ae5195954f8589db59.jpg');
-    background-size: cover;
-    background-position: end;
-    background-repeat: no-repeat;
 }
 
 .App-h1 {
@@ -43,16 +26,54 @@
     max-width: 200px;
 }
 
-.App-images {
-    background-color: white;
-    color: black;
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding: 0px 100px;
-}
+
 
 .App-img {
     height: 200px;
 }
+.app-body-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .app-body-div1 {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    font-weight: bold;
+    color:black; 
+    text-align: center;
+    margin: 20px;
+    animation: slideIn 1.5s ease-out;
+
+  }
+  .home-header{
+    font-family: 'Poppins', sans-serif; /* Choose a sleek, modern font */
+    font-size: 3em;
+    color: #16325B;
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
+    margin-bottom: 20px;
+  }
+.home-para{
+    font-family: 'Roboto', sans-serif; /* Another elegant and legible font */
+    font-size: 1.2em;
+    color:#2e3a46;;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 70%;
+    animation: fadeIn 1.5s ease-out;
+}
+
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

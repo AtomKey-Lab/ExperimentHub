@@ -20,7 +20,7 @@ function Physics() {
             alt="Item 1" 
             className="lab-image" 
           />
-           <h3>Vernier caliper</h3>
+           <h3 className='cart-item-h3'>Vernier caliper</h3>
           <p>Vernier caliper is an amazing measurement tool that can measure length accurately up to 1/10th or 1/100th of a millimeter. For instance, if someone needs to measure the diameter of a wire or the inside and outside dimensions of a hollow tube, it can easily be done with a vernier caliper rather than a meter scale.</p>
         </div>
         <div className="cart-item">
@@ -29,7 +29,7 @@ function Physics() {
             alt="Item 2" 
             className="lab-image" 
           />
-          <h3>Screw Gauze </h3>
+          <h3 className='cart-item-h3'>Screw Gauze </h3>
           <p>Screw Gauze, also known as a micrometer screw gauze, is a P-shaped device in a physics lab that is calibrated to measure the thickness of sheets and the diameter of wires or spherical objects with extremely high accuracy. </p>
         </div>
         <div className="cart-item">
@@ -38,7 +38,7 @@ function Physics() {
             alt="Item 3" 
             className="lab-image" 
           />
-          <h3> Concave Lens</h3>
+          <h3 className='cart-item-h3'> Concave Lens</h3>
           <p>A concave lens is a lens that diverges the beam of light which has been passed through it. It is characterized by inside curved lenses either on both or one side of the lens. The images formed from concave lenses are sharp, upright, diminished, and virtual.</p>
         </div>
         <div className="cart-item">
@@ -47,7 +47,7 @@ function Physics() {
             alt="Item 4" 
             className="lab-image" 
           />
-          <h3> Convex lenses</h3>
+          <h3 className='cart-item-h3'> Convex lenses</h3>
           <p>Convex lenses are the type of lenses that converges the ray of light to form sharp images of the object. Convex lenses are thicker at the center and thin at the edges. When parallel rays of light pass through such lenses, the rays converge and meet at a common point behind them This point is known as a focal point.</p>
         </div>
         <div className="cart-item">
@@ -56,7 +56,7 @@ function Physics() {
             alt="Item 5" 
             className="lab-image" 
           />
-          <h3>Prim</h3>
+          <h3 className='cart-item-h3'>Prim</h3>
           <p>A prism is a triangular, 3-dimensional piece of glass or transparent material which is used in a physics laboratory for analyzing and studying the concepts of refraction. When a white ray of light is passed through a prism it refracts and splits into its spectrum of colors (violet, indigo, blue, green, yellow, orange, and red). .</p>
         </div>
         <div className="cart-item">
@@ -65,7 +65,7 @@ function Physics() {
             alt="Item 6" 
             className="lab-image" 
           />
-          <h3>Glass Slab</h3>
+          <h3 className='cart-item-h3'>Glass Slab</h3>
           <p>A glass slab is a cuboidal-shaped, 3-dimensional material made of glass and is widely used in physics for pin method experiments and understanding refraction phenomena. It is also used for providing refractive law and measuring refractive index..</p>
         </div>
         <div className="cart-item">
@@ -74,7 +74,7 @@ function Physics() {
             alt="Item 7" 
             className="lab-image" 
           />
-          <h3>Ammeter</h3>
+          <h3 className='cart-item-h3'>Ammeter</h3>
           <p>An Ammeter is a measuring instrument used to find the strength of the current flowing around an electrical circuit when connected in series with the part of the circuit being measured. To measure a device’s current, it must be connected in series to that device.</p>
         </div>
         <div className="cart-item">
@@ -83,7 +83,7 @@ function Physics() {
             alt="Item 8" 
             className="lab-image" 
           />
-          <h3>Multimeter</h3>
+          <h3 className='cart-item-h3'>Multimeter</h3>
           <p>A multimeter is a device that combines several measurement functions in one unit and can be used to check the conductors, the continuity of the circuit, measuring the voltage in the socket or the battery level of the car. A normal multimeter may possess the abilities to measure voltage, current, and resistance.</p>
         </div>
         <div className="cart-item">
@@ -92,7 +92,7 @@ function Physics() {
             alt="Item 6" 
             className="lab-image" 
           />
-          <h3>Bar Magnets</h3>
+          <h3 className='cart-item-h3'>Bar Magnets</h3>
           <p>Bar magnets are found in physics laboratories for understanding the concepts of magnets. A bar magnet consists of a north pole and a south pole. When two bar magnets are placed together then like poles repel each other and unlike poles attract each other.</p>
         </div>
       </div>
