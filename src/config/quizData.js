@@ -90,7 +90,7 @@ export const gravitationalQuestions = [
       ],
     },
   ];
- export const chemestryQuestions = [
+ export const chemistryQuestions = [
     {
       questionText: "What is the chemical symbol for water?",
       answerOptions: [

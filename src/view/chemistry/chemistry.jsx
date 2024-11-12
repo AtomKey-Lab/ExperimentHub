@@ -1,5 +1,5 @@
 import React from 'react';
-import './chemestry.css';
+import './chemistry.css';
 import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
 import Navbar2 from '../../components/navbar/navbar2'; 

@@ -1,4 +1,4 @@
-export const chemestryprocedureData = {
+export const chemistryprocedureData = {
     phenolFormaldehyde: {
       name: "Phenol-formaldehyde Resin",
       color: "Pink",

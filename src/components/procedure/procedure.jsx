@@ -1,5 +1,5 @@
 import React from 'react';
-import { gravitationProcedureData, chemestryprocedureData } from '../../config/procedureData';
+import { gravitationProcedureData, chemistryprocedureData } from '../../config/procedureData';
 import './procedure.css';
 
 function Procedure() {
@@ -9,8 +9,8 @@ function Procedure() {
   // Define variables to store experiment data based on the path
   let experimentData;
 
-  if (path.includes('chemestry')) {
-    experimentData = chemestryprocedureData;
+  if (path.includes('chemistry')) {
+    experimentData = chemistryprocedureData;
   } else if (path.includes('gravitation')) {
     experimentData = gravitationProcedureData;
   }
@@ -18,7 +18,7 @@ function Procedure() {
   return (
     <div className="procedure-container">
       {/* Conditional rendering based on the URL */}
-      {path.includes('chemestry') && <h1 className="procedure-title">Chemistry - Procedure</h1>}
+      {path.includes('chemistry') && <h1 className="procedure-title">Chemistry - Procedure</h1>}
       {path.includes('gravitation') && <h1 className="procedure-title">Gravitation - Procedure</h1>}
 
       {experimentData && (

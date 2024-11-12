@@ -53,7 +53,7 @@ const LogIn = () => {
         <header className="App-header">
           <div className="logo-container">
             <img src={logo} alt="BeatVibe Logo" className="logo" />
-            <h1 className='Title-Login'>Virtual Lab</h1>
+            <h1 className='Title-Login'>AtomKey Lab</h1>
           </div>
         </header>
 

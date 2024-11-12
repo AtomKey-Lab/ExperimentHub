@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="app-container">
-      {path.includes('chemestry') && (
+      {path.includes('chemistry') && (
         <div className="section chemistry-section">
           <div className="resin">
             <h1 className="title">Phenol Formaldehyde Resin</h1>
@@ -85,7 +85,7 @@ function App() {
         </div>
       )}
 
-      {!path.includes('chemestry') && !path.includes('gravitation') && (
+      {!path.includes('chemistry') && !path.includes('gravitation') && (
         <p className="fallback-text">This is the main content of the Procedure component.</p>
       )}
     </div>

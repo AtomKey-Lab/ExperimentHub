@@ -1,0 +1,83 @@
+/* gravitation.css */
+
+.experiment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #3a2ac9;
+    margin-bottom: 10px;
+  }
+  
+  .experiment-content {
+    display: flex;
+    gap: 40px; /* Space between controls and falling area */
+    align-items: flex-start;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 200px;
+  }
+  
+  .controls label {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .controls input {
+    margin-left: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .falling-area {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border: 2px dashed #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .object {
+    width: 50px;
+    height: 50px;
+    background-color: #ff6347;
+    border-radius: 50%;
+  }
+  
+  .metrics-box {
+    width: 300px;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #f0f8ff; /* Light blue for visibility */
+    border: 2px solid #007bff; /* Blue border for clarity */
+    border-radius: 8px;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+  }
+  

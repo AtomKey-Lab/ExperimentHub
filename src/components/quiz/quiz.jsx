@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; 
 import './quiz.css';
-import {gravitationalQuestions,chemestryQuestions} from "../../config/quizData"
+import {gravitationalQuestions,chemistryQuestions} from "../../config/quizData"
 const Quiz = () => {
    const location = useLocation(); 
   const [questions, setQuestions] = useState([]);
@@ -12,8 +12,8 @@ const Quiz = () => {
   useEffect(() => {
     if (location.pathname.includes('gravitation')) {
       setQuestions(gravitationalQuestions);
-    } else if (location.pathname.includes('chemestry')) {
-      setQuestions(chemestryQuestions);
+    } else if (location.pathname.includes('chemistry')) {
+      setQuestions(chemistryQuestions);
     }
   }, [location]);
 

@@ -1,0 +1,73 @@
+/* Basic Experiment Styling */
+.experiment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.experiment-controls, .experiment-steps, .instrument-panel {
+    margin-top: 20px;
+}
+
+.instrument-panel {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button.selected {
+    border: 2px solid #4CAF50;
+}
+
+/* Reaction Container and Reaction Status */
+.reaction-container {
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.reaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: background-color 0.5s, transform 1s;
+}
+
+/* Keyframes for Pickup and Pouring Animations */
+@keyframes pickup {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes pour {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-30deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.beaker.picking-up {
+    animation: pickup 1s ease forwards;
+}
+
+.beaker.pouring {
+    animation: pour 1.5s ease forwards;
+}
