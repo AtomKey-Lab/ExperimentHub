@@ -1,5 +1,5 @@
 export const gravitationTheory = {
-    description: "Gravitation is a fundamental force that attracts two bodies towards each other. It is one of the four fundamental forces of nature and governs the motion of celestial bodies and objects on Earth. Isaac Newton formulated the law of universal gravitation, which states that every point mass attracts every other point mass by a force acting along the line intersecting both points.",
+    description: "Gravitation is the force by which two bodies attract each other. This experiment illustrates gravitational pull and air resistance (drag) effects on a falling object, allowing us to examine how these forces influence the object’s velocity and position over time.",
     laws: [
       {
         lawName: "Newton's Law of Universal Gravitation",
@@ -13,24 +13,24 @@ export const gravitationTheory = {
       }
     ],
     properties: [
-      "Gravitation is always attractive, never repulsive.",
-      "The force of gravitation decreases with the square of the distance between two objects.",
-      "Gravitational force is proportional to the masses of the objects involved.",
-      "The force is always directed along the line connecting the centers of the two masses."
+      "Always Attractive: The gravitational force is always pulling objects toward Earth.",
+"Inversely Proportional to Distance: The gravitational force decreases with distance but remains effective within the small simulation distance.",
+"Influenced by Mass and Gravity: While mass remains constant, gravitational acceleration can be adjusted to observe changes in force.",
     ],
     uses: [
-      "Gravitation explains the orbits of planets, moons, and satellites.",
-      "It is responsible for the tides on Earth caused by the gravitational pull of the moon and the sun.",
-      "Gravitational force is used in technologies such as GPS, satellite communication, and space exploration.",
-      "Understanding gravitation is essential for rocket launches and the navigation of spacecraft."
+      "Astronomy: Explains orbits and gravitational effects on celestial bodies.",
+      "Earth Sciences: Analyzes tides, Earth's shape, and geophysical surveys.",
+      "Technology: Powers satellite, GPS, and space exploration.",
+      "Daily Life: Explains falling objects and experienced weight.",
     ],
     applications: [
-      "Space exploration and satellite launches",
-      "Tidal force analysis for marine studies",
-      "Gravity-based surveying techniques",
-      "Planetary motion calculations for astronomers"
+      "Space Exploration: Calculating satellite orbits and gravity assists.",
+      "Tidal Studies: Tidal predictions and coastal management.",
+      "Planetary Motion: Understanding orbits and researching dark matter.",
+      "Engineering: Gravity-based surveying and structural stability.",
+      "Future Research: Insights into quantum gravity and black hole studies.",
     ],
-    futureResearch: "Further research into gravitation may help us understand dark matter and dark energy, which constitute most of the universe’s mass and energy yet remain mysterious."
+    futureResearch: "Expanding knowledge of gravitation could lead to insights into quantum gravity, unifying general relativity and quantum mechanics."
   };
   
   export const chemistryTheory = {
