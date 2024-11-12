@@ -11,6 +11,7 @@ import SignUp from './view/SignUp/SignUp'
 import Forgot from './view/Forgot/Forgot'
 import Chemisty from './components/Instrument/Chemistry/Chemistry'
 import Physics from './components/Instrument/Physics/Physics'
+import Instrument from './components/Instrument/Chemistry/Chemistry'
 import { BrowserRouter,Route,Routes } from "react-router-dom"
 
 const root =reactDom.createRoot(document.getElementById('root'))
@@ -28,7 +29,7 @@ root.render(
         <Route path="/Forgot" element={<Forgot/>}/>
         <Route path="/chemistry" element={<Chemisty/>}/>
         <Route path="/physics" element={<Physics/>}/>
-        
+        <Route path="/Instrument" element={<Instrument/>}/>
     </Routes>
     </BrowserRouter>
 )

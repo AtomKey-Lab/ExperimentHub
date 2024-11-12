@@ -17,7 +17,7 @@ function Footer() {
                 <div className="footer-section">
                     <h4 className='footer-section-h4'>Need to Study</h4>
                     <ul className='footer-section-ul'>
-                        <li><a href="/chemistry" className='social-icons-a '>Chemistry Instruments</a></li>
+                        <li><a href="/Instrument" className='social-icons-a '>Chemistry Instruments</a></li>
                         <li><a href="/physics" className='social-icons-a '>Physics Instruments</a></li>
                     </ul>
                 </div>
