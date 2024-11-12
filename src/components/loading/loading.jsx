@@ -13,7 +13,7 @@ const ExperimentLoading = () => {
           <span className="bubble"></span>
         </div>
       </div>
-      <p>Experiment in Progress...</p>
+      <p className='bubble-p'>Experiment in Progress...</p>
     </div>
   );
 };
