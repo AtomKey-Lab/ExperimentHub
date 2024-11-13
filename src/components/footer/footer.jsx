@@ -49,7 +49,7 @@ function Footer() {
             </div>
 
             <div className="footer-bottom">
-                <p className='footer-section-p'>&copy; 2024 Virtual Lab. All rights reserved.</p>
+                <p className='footer-section'>&copy; 2024 Virtual Lab. All rights reserved.</p>
             </div>
         </footer>
     );

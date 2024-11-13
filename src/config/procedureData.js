@@ -28,16 +28,17 @@ export const chemistryprocedureData = {
   };
   export const gravitationProcedureData = {
     gravitationalMassExperiment: {
-      name: "Gravitational Mass and Earth's Orbit Around the Sun",
+      name: "Exploring Gravity: Effects of Mass, Velocity, and Drag on Free-Falling Objects",
       color: "N/A",
       steps: [
-        "Set up a simulation to visualize the gravitational forces between the Sun and Earth.",
-        "Calculate the gravitational force between the Earth and the Sun using Newton's Law of Universal Gravitation.",
-        "Observe the Earth's orbit as it revolves around the Sun, noting how velocity and distance influence the path.",
-        "Monitor the elliptical shape of Earth's orbit, governed by gravitational attraction.",
-        "Record observations on how gravitational force impacts the orbital stability and velocity of Earth."
+        "Procedure for the Gravity Experiment",
+        "Set Initial Values: Adjust mass, gravity, and drag coefficient sliders to set up the conditions.",
+        "Start the Experiment: Press “Start Experiment” to release the object in a simulated environment.",
+        "Observe the Motion: Watch the object fall in the container, with position and velocity updated in real time.",
+        "Analyze Metrics: Observe metrics displayed (velocity, position) to understand the effect of gravity, mass, and drag.",
+        "Reset Experiment: Press “Reset” to reset the object and restart with new values if desired.",
       ],
-      result: "The experiment demonstrates the gravitational force maintaining Earth's orbit around the Sun, showcasing gravitational mass and orbital dynamics."
+      result: "The experiment shows that gravity increases an object’s velocity during free fall, while drag slows it down. Mass doesn’t impact the fall rate, highlighting uniform acceleration under gravity."
     }
   };
   
