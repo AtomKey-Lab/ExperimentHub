@@ -4,7 +4,6 @@ const navLinksData = [
     { name: 'Procedure' },
     { name: 'Quiz' },
     { name: 'Video' },
-    { name: 'Experiment' },
   ];
   
   export default navLinksData;
