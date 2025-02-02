@@ -8,7 +8,7 @@ import Procedure from '../procedure/procedure';
 import Experiment from '../experiment/experiment';
 import Quiz from '../quiz/quiz';
 
-function Navbar2() {
+function Navbar2({link,title}) {
   const [currentpage, setCurrentpage] = useState(navLinksData[0].name);
 
   const pageComponents = {
@@ -31,9 +31,12 @@ function Navbar2() {
             }}
             className={currentpage === item.name ? 'active' : ''}
           >
+            
             {item.name}
           </h1>
-        ))}
+        ))}<a href={link} className="viewSimulation" target="_blank" rel="noopener noreferrer">
+     {title}
+      </a>
       </nav>
 
       <div className="page-content">

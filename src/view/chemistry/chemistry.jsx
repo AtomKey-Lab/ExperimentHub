@@ -10,11 +10,17 @@ function Gravitation() {
     <div className="gravitation-container">
       <Navbar />
       
+
       <div className="content-area">
-        <Navbar2 />
+        <Navbar2 
+        link="https://chemistry-experiment-kappa.vercel.app/"
+        title="Experiment"
+        />
+        
       </div>
 
       <Footer />
+      
     </div>
   );
 }

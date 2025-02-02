@@ -9,3 +9,12 @@
 .navbar2 h1{
     cursor: pointer;
 }
+.viewSimulation{
+    text-decoration: none;
+    padding-top: 10px;
+    color: #3a2ac9;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+}
