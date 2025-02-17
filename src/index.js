@@ -12,6 +12,8 @@ import Forgot from './view/Forgot/Forgot'
 import Chemisty from './components/Instrument/Chemistry/Chemistry'
 import Physics from './components/Instrument/Physics/Physics'
 import Instrument from './components/Instrument/Chemistry/Chemistry'
+import GravityExperiment from './components/experiment/gravitation'
+
 import { BrowserRouter,Route,Routes } from "react-router-dom"
 
 const root =reactDom.createRoot(document.getElementById('root'))
@@ -19,6 +21,7 @@ root.render(
     <BrowserRouter><Routes>
         <Route path="/" element={<App/>}/>
         <Route path="/simulation" element={<Simulation/>}/>
+        <Route path="/GravityExperiment" element={<GravityExperiment/>}/>
         <Route path="/About" element={<About/>}/>
         <Route path="/Login" element={<Login/>}/>
         <Route path="/Gravitation" element={<Gravitation/>}/>

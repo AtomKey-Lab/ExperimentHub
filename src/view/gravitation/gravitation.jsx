@@ -11,7 +11,10 @@ function Gravitation() {
       <Navbar />
       
       <div className="content-area">
-        <Navbar2 />
+      <Navbar2 
+        link="/GravityExperiment"
+        title="Experiment"
+        />
       </div>
 
       <Footer />
