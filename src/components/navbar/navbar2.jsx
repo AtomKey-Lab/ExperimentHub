@@ -7,7 +7,7 @@ import Video from './../video/video';
 import Procedure from '../procedure/procedure';
 import Experiment from '../experiment/experiment';
 import Quiz from '../quiz/quiz';
-import ChatBot from './../../view/Chatbot/chatbot';
+import ChatBot from './../../components/ChatBot/ChatBot';
 
 function Navbar2({link,title}) {
   const [currentpage, setCurrentpage] = useState(navLinksData[0].name);
@@ -18,7 +18,7 @@ function Navbar2({link,title}) {
     Quiz: <Quiz />,
     Video: <Video />,
     Experiment: <Experiment />,
-    Experiment: <ChatBot />,
+    ChatBot: <ChatBot />,
   };
 
   return (

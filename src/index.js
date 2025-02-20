@@ -13,7 +13,6 @@ import Chemisty from './components/Instrument/Chemistry/Chemistry'
 import Physics from './components/Instrument/Physics/Physics'
 import Instrument from './components/Instrument/Chemistry/Chemistry'
 import GravityExperiment from './components/experiment/gravitation'
-import ChatBot from './view/Chatbot/chatbot'
 
 import { BrowserRouter,Route,Routes } from "react-router-dom"
 
@@ -34,7 +33,6 @@ root.render(
         <Route path="/chemistry" element={<Chemisty/>}/>
         <Route path="/physics" element={<Physics/>}/>
         <Route path="/Instrument" element={<Instrument/>}/>
-        <Route path="/ChatBot" element={<ChatBot/>}/>
     </Routes>
     </BrowserRouter>
 )
