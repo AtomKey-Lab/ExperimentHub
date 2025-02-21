@@ -10,6 +10,10 @@ const ChatBot = () => {
   const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState("");
   const [showWelcome, setShowWelcome] = useState(true);
+  const [typewriterActive, setTypewriterActive] = useState(false);
+  const [currentResponse, setCurrentResponse] = useState("");
+  const [fullResponse, setFullResponse] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
   const messagesEndRef = useRef(null);
 
   const API_URL =
@@ -23,6 +27,32 @@ const ChatBot = () => {
     scrollToBottom();
   }, [messages]);
 
+  // Typewriter effect for bot responses
+  useEffect(() => {
+    if (typewriterActive && charIndex < fullResponse.length) {
+      const timer = setTimeout(() => {
+        setCurrentResponse(fullResponse.substring(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+      }, 30); // Speed of typing
+      return () => clearTimeout(timer);
+    } else if (typewriterActive && charIndex >= fullResponse.length) {
+      setTypewriterActive(false);
+      // Finalize message after typing is complete
+      setMessages(prev => {
+        const updatedMessages = [...prev];
+        const lastIndex = updatedMessages.length - 1;
+        if (lastIndex >= 0 && updatedMessages[lastIndex].isTyping) {
+          updatedMessages[lastIndex] = {
+            type: "bot",
+            text: fullResponse,
+            isResponse: true
+          };
+        }
+        return updatedMessages;
+      });
+    }
+  }, [typewriterActive, charIndex, fullResponse]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!inputText.trim()) return;
@@ -30,20 +60,26 @@ const ChatBot = () => {
     if (!userName && showWelcome === false) {
       setUserName(inputText);
       setMessages([...messages, { type: "user", text: inputText }]);
+      
+      // Start welcome message typing effect
+      const welcomeMsg = `Great to meet you, ${inputText}! How can I help you today?`;
       setTimeout(() => {
-        setMessages((prev) => [
+        setFullResponse(welcomeMsg);
+        setCurrentResponse("");
+        setCharIndex(0);
+        setTypewriterActive(true);
+        setMessages(prev => [
           ...prev,
-          {
-            type: "bot",
-            text: `Great to meet you, ${inputText}! How can I help you today?`
-          }
+          { type: "bot", text: "", isTyping: true }
         ]);
       }, 500);
+      
       setInputText("");
       return;
     }
 
-    const updatedMessages = [...messages, { type: "user", text: inputText }];
+    const userQuery = inputText;
+    const updatedMessages = [...messages, { type: "user", text: userQuery }];
     setMessages(updatedMessages);
     setInputText("");
     setLoading(true);
@@ -57,7 +93,7 @@ const ChatBot = () => {
         body: JSON.stringify({
           contents: [
             {
-              parts: [{ text: inputText }]
+              parts: [{ text: userQuery }]
             }
           ]
         })
@@ -72,15 +108,31 @@ const ChatBot = () => {
         data.candidates?.[0]?.content?.parts?.[0]?.text ||
         "I couldn't generate a response. Please try again.";
       
-      setMessages([...updatedMessages, { type: "bot", text: generatedText }]);
+      // Start typewriter effect
+      setTimeout(() => {
+        setLoading(false);
+        setFullResponse(generatedText);
+        setCurrentResponse("");
+        setCharIndex(0);
+        setTypewriterActive(true);
+        setMessages([
+          ...updatedMessages,
+          { type: "bot", text: "", isTyping: true }
+        ]);
+      }, 700);
+      
     } catch (err) {
-      setMessages([
-        ...updatedMessages,
-        { type: "bot", text: "Sorry, I encountered an error. Please try again later." }
-      ]);
+      setTimeout(() => {
+        setMessages([
+          ...updatedMessages,
+          { 
+            type: "bot", 
+            text: "Sorry, I encountered an error. Please try again later." 
+          }
+        ]);
+        setLoading(false);
+      }, 500);
     }
-
-    setLoading(false);
   };
 
   const startChat = () => {
@@ -116,12 +168,33 @@ const ChatBot = () => {
     );
   };
 
+  const renderMessage = (message) => {
+    if (message.isTyping) {
+      return (
+        <div className="response-box typing-effect">
+          <h4 className="response-title">Response</h4>
+          <div className="response-content">{currentResponse}</div>
+        </div>
+      );
+    }
+    
+    if (message.isResponse) {
+      return (
+        <div className="response-box">
+          <h4 className="response-title"> Response</h4>
+          <div className="response-content">{message.text}</div>
+        </div>
+      );
+    }
+    return message.text;
+  };
+
   const chatInterface = () => {
     return (
       <div className="chat-interface">
         <div className="chat-messages">
           {messages.map((message, index) => (
-            <div key={index} className={`message-row ${message.type}`}>
+            <div key={index} className={`message-row ${message.type} ${message.isTyping ? 'typing' : ''}`}>
               {message.type === "bot" && (
                 <div className="bot-icon">
                   <div className="bot-icon-bg">
@@ -133,7 +206,7 @@ const ChatBot = () => {
                 </div>
               )}
               <div className={message.type === "user" ? "user-message" : "bot-message"}>
-                {message.text}
+                {renderMessage(message)}
               </div>
             </div>
           ))}
@@ -167,6 +240,7 @@ const ChatBot = () => {
               placeholder={userName ? "Type a message..." : "Your name"}
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
+              autoFocus
             />
             <button type="submit" className="send-button" disabled={!inputText.trim()}>
               <svg xmlns="http://www.w3.org/2000/svg" className="send-icon" viewBox="0 0 20 20" fill="currentColor">
