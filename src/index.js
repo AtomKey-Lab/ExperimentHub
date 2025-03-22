@@ -13,6 +13,8 @@ import Chemisty from './components/Instrument/Chemistry/Chemistry'
 import Physics from './components/Instrument/Physics/Physics'
 import Instrument from './components/Instrument/Chemistry/Chemistry'
 import GravityExperiment from './components/experiment/gravitation'
+import ChemistryCard from './components/ChemistryCard/ChemistryCard'
+import ChemistryDetail from './components/ChemistryDetail/ChemistryDetail'
 
 import { BrowserRouter,Route,Routes } from "react-router-dom"
 
@@ -33,6 +35,8 @@ root.render(
         <Route path="/chemistry" element={<Chemisty/>}/>
         <Route path="/physics" element={<Physics/>}/>
         <Route path="/Instrument" element={<Instrument/>}/>
+        <Route path="/chemistrycart" element={<ChemistryCard/>}/>
+        <Route path="/chemistrydetail/:id" element={<ChemistryDetail />} />
     </Routes>
     </BrowserRouter>
 )
