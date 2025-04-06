@@ -37,7 +37,7 @@
     margin-left: 10px;
   }
   
-  button {
+  button1 {
     padding: 10px 20px;
     font-size: 1rem;
     color: white;
@@ -48,7 +48,7 @@
     transition: background-color 0.3s ease;
   }
   
-  button:hover {
+  button1:hover {
     background-color: #0056b3;
   }
   

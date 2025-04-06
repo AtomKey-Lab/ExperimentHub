@@ -73,3 +73,96 @@ export const gravitationTheory = {
     }
   };
   
+  export const AcidBase ={
+ 
+      
+      cationAnalysis: {
+        overview: "Systematic qualitative analysis of cations involves dividing them into groups based on their selective precipitation with specific reagents, followed by confirmatory tests.",
+        
+        generalProcedure: [
+          "1. **Preliminary Tests**: Flame test, solubility check, reaction with dilute HCl, H₂SO₄, etc.",
+          "2. **Group Separation**: Sequential addition of group reagents to precipitate cations.",
+          "3. **Confirmatory Tests**: Identification of individual cations using specific reactions."
+        ],
+    
+        analysisGroups: [
+          {
+            group: "Group I (Silver Group)",
+            reagent: "Dilute HCl",
+            cations: [
+              {
+                name: "Ag⁺ (Silver)",
+                precipitate: "White AgCl (soluble in NH₄OH)",
+                confirmatoryTest: "Dissolves in NH₄OH → reprecipitates with HNO₃"
+              },
+              {
+                name: "Pb²⁺ (Lead)",
+                precipitate: "White PbCl₂ (soluble in hot water)",
+                confirmatoryTest: "Yellow PbCrO₄ with K₂CrO₄"
+              },
+              {
+                name: "Hg₂²⁺ (Mercury I)",
+                precipitate: "White Hg₂Cl₂ (turns black with NH₄OH)",
+                confirmatoryTest: "Black mixture of Hg + HgNH₂Cl with NH₄OH"
+              }
+            ]
+          },
+          {
+            group: "Group II (Copper-Arsenic Group)",
+            subGroups: {
+              IIA: "Cu²⁺, Pb²⁺, Bi³⁺, Cd²⁺ (Acid-insoluble sulfides)",
+              IIB: "As³⁺, Sb³⁺, Sn²⁺ (Thio-complex forming)"
+            },
+            reagent: "H₂S gas in 0.3M HCl",
+            cations: [
+              {
+                name: "Cu²⁺ (Copper)",
+                precipitate: "Black CuS",
+                confirmatoryTest: "Blue [Cu(NH₃)₄]²⁺ in NH₄OH"
+              },
+              {
+                name: "As³⁺ (Arsenic)",
+                precipitate: "Yellow As₂S₃",
+                confirmatoryTest: "Gives garlic odor when heated + yellow precipitate with (NH₄)₂MoO₄"
+              }
+            ]
+          },
+          {
+            group: "Group III (Iron Group)",
+            reagent: "NH₄Cl + NH₄OH (pH ~8-9)",
+            cations: [
+              {
+                name: "Fe³⁺ (Iron III)",
+                precipitate: "Red-brown Fe(OH)₃",
+                confirmatoryTest: "Blood red color with KSCN or blue Prussian blue with K₄[Fe(CN)₆]"
+              },
+              {
+                name: "Al³⁺ (Aluminum)",
+                precipitate: "White gelatinous Al(OH)₃",
+                confirmatoryTest: "Red lake with alizarin dye"
+              }
+            ]
+          },
+          // ... (similarly for Groups IV-VI)
+        ],
+    
+        specialTests: {
+          flameTests: [
+            "Na⁺: Persistent yellow flame",
+            "K⁺: Violet flame (view through cobalt glass)",
+            "Ca²⁺: Brick red flame"
+          ],
+          dryTests: [
+            "Ammonium (NH₄⁺): Pungent smell with NaOH on heating",
+            "Carbonate (CO₃²⁻): Effervescence with dilute acid"
+          ]
+        },
+    
+        notes: [
+          "• Always perform group separation in sequence (I → VI)",
+          "• Wash precipitates with hot water to remove adsorbed ions",
+          "• Use fresh reagents for sulfides (H₂S decays rapidly)"
+        ]
+      }
+    }
+  

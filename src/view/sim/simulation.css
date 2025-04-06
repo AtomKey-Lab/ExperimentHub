@@ -1,0 +1,23 @@
+.category-buttons {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Centers vertically if needed */
+    gap: 20px; /* Adds space between buttons */
+    margin: 20px 0; /* Adds margin for spacing */
+  }
+  
+  .category-buttons button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #0c4a6b;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .category-buttons button:hover {
+    background-color: #092c44;
+  }
+  

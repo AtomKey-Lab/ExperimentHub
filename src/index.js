@@ -13,10 +13,20 @@ import Chemisty from './components/Instrument/Chemistry/Chemistry'
 import Physics from './components/Instrument/Physics/Physics'
 import Instrument from './components/Instrument/Chemistry/Chemistry'
 import GravityExperiment from './components/experiment/gravitation'
-import ChemistryCard from './components/ChemistryCard/ChemistryCard'
-import ChemistryDetail from './components/ChemistryDetail/ChemistryDetail'
+import AcidBase from './view/Experiments/AcidBase/AcidBase'
+
 
 import { BrowserRouter,Route,Routes } from "react-router-dom"
+import Balloonelectricity from './view/Experiments/Balloonelectricity/Balloonelectricity'
+import Molarity from './view/Experiments/Molarity/Molarity'
+import WaveString from './view/Experiments/WaveString/WaveString'
+import Density from './view/Experiments/Density/Density'
+import Waves from './view/Experiments/Wave/Wave'
+import Springs from './view/Experiments/Springs/Springs'
+import StatesMatter from './view/Experiments/StatesMatter/StatesMatter'
+import HookesJaw from './view/Experiments/HookesLaw/HookesLaw'
+import Profile from '../src/components/Profile/Profile'
+
 
 const root =reactDom.createRoot(document.getElementById('root'))
 root.render(
@@ -35,8 +45,18 @@ root.render(
         <Route path="/chemistry" element={<Chemisty/>}/>
         <Route path="/physics" element={<Physics/>}/>
         <Route path="/Instrument" element={<Instrument/>}/>
-        <Route path="/chemistrycart" element={<ChemistryCard/>}/>
-        <Route path="/chemistrydetail/:id" element={<ChemistryDetail />} />
+        <Route path="/acidbase" element={<AcidBase/>}/>
+        <Route path="/molarity" element={<Molarity/>}/>
+        <Route path="/balloanelectricity" element={<Balloonelectricity/>}/>
+        <Route path="/wavestring" element={<WaveString/>}/>
+        <Route path="/density" element={<Density/>}/>
+        <Route path="/wave" element={<Waves/>}/>
+        <Route path="/springs" element={<Springs/>}/>
+        <Route path="/statematter" element={<StatesMatter/>}/>
+        <Route path="/hookslaw" element={<HookesJaw/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+        
+        
     </Routes>
     </BrowserRouter>
 )

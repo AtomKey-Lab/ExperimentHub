@@ -1,22 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './login.css';
 import logo from '../../Assets/logo.jpg';
 import { FcGoogle } from 'react-icons/fc';
 import PasswordToggle from '../hooks/PasswordToggle';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LogIn = () => {
   const initialData = {
-    email: "",
+    email: localStorage.getItem('userEmail') || "", // Retrieve email from local storage
     password: ""
   };
 
   const [passwordInputType, toggleIcon] = PasswordToggle();
   const [inputData, setInputData] = useState(initialData);
-  const [msg, setMsg] = useState(false);
   const [errorMessage, setErrorMessage] = useState(""); 
-
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const savedEmail = localStorage.getItem('userEmail');
+    if (savedEmail) {
+      setInputData(prevState => ({ ...prevState, email: savedEmail }));
+    }
+  }, []);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -26,23 +33,24 @@ const LogIn = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
 
     if (!inputData.email || !inputData.password) {
       setErrorMessage("Credentials not found");
+      toast.error("Credentials not found");
     } else if (!emailPattern.test(inputData.email)) {
       setErrorMessage("Enter email in correct format");
-    } else if (!passwordPattern.test(inputData.password)) {
-      setErrorMessage("Password must contain 1 uppercase, 1 lowercase, 1 digit, 1 special character, and be exactly 8 characters long.");
+      toast.error("Enter email in correct format");
+    } else if (inputData.password.length < 6) {
+      setErrorMessage("Password must be at least 6 characters long.");
+      toast.error("Password must be at least 6 characters long.");
     } else {
       setErrorMessage("");
-      setMsg(true);
-      alert(`${inputData.email} logged in successfully!`);
-      setTimeout(() => {
-        setMsg(false);
-      }, 2000);
+      localStorage.setItem('userEmail', inputData.email); // Save email in local storage
+      toast.success(`${inputData.email} logged in successfully!`);
 
-      navigate("/");
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
     }
   };
 
@@ -73,7 +81,6 @@ const LogIn = () => {
                 type={passwordInputType}
                 placeholder='Password'
                 name="password"
-                maxLength={12}
                 value={inputData.password}
                 onChange={handleInputChange}
               />
@@ -91,12 +98,9 @@ const LogIn = () => {
         </div>
 
         <button className='submit-button' onClick={handleSubmit}>Log In</button>
-        <h4 className='or'>or</h4>
-        <button className='google-button'>
-          <FcGoogle className="google-icon" />
-          Log In with Google
-        </button>
       </form>
+
+      <ToastContainer position="top-right" autoClose={2000} />
     </div>
   );
 };
