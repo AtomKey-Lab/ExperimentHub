@@ -26,6 +26,11 @@ import Springs from './view/Experiments/Springs/Springs'
 import StatesMatter from './view/Experiments/StatesMatter/StatesMatter'
 import HookesJaw from './view/Experiments/HookesLaw/HookesLaw'
 import Profile from '../src/components/Profile/Profile'
+import EnergyForm from './view/Experiments/EnergyForm/EnergyForm'
+import Concentration from './view/Experiments/Concentration/Concentration'
+import Balancing from './view/Experiments/Balancing/Balancing'
+import Force from './view/Experiments/Force/Force'
+import SoundWaves from './view/Experiments/SoundWaves/SoundWaves'
 
 
 const root =reactDom.createRoot(document.getElementById('root'))
@@ -55,6 +60,11 @@ root.render(
         <Route path="/statematter" element={<StatesMatter/>}/>
         <Route path="/hookslaw" element={<HookesJaw/>}/>
         <Route path="/profile" element={<Profile/>}/>
+        <Route path="/energyform" element={<EnergyForm/>}/>
+        <Route path="/concentration" element={<Concentration/>}/>
+        <Route path="/balancing" element={<Balancing/>}/>
+        <Route path="/force" element={<Force/>}/>
+        <Route path="/soundwaves" element={<SoundWaves/>}/>
         
         
     </Routes>

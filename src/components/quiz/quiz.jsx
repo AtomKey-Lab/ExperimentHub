@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; 
 import './quiz.css';
-import {gravitationalQuestions,chemistryQuestions} from "../../config/quizData"
+import {
+  gravitationalQuestions,
+  chemistryQuestions,
+  acidBaseQuestions
+} from "../../config/quizData";
+
 const Quiz = () => {
-   const location = useLocation(); 
+  const location = useLocation(); 
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -14,6 +19,8 @@ const Quiz = () => {
       setQuestions(gravitationalQuestions);
     } else if (location.pathname.includes('chemistry')) {
       setQuestions(chemistryQuestions);
+    } else if (location.pathname.includes('acidbase')) {
+      setQuestions(acidBaseQuestions);
     }
   }, [location]);
 
@@ -42,14 +49,15 @@ const Quiz = () => {
             <div className="question-count">
               <span>Question {currentQuestion + 1}</span>/{questions.length}
             </div>
-            <div className="question-text">{questions[currentQuestion]?.questionText}</div>
+            <div className="question-text">
+              {questions[currentQuestion]?.questionText}
+            </div>
           </div>
           <div className="answer-section">
             {questions[currentQuestion]?.answerOptions.map((answerOption, index) => (
               <button
                 key={index}
                 onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
-                
               >
                 {answerOption.answerText}
               </button>

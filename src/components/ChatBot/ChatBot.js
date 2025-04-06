@@ -237,7 +237,7 @@ const ChatBot = () => {
             <input
               type="text"
               className="chat-input"
-              placeholder={userName ? "Type a message..." : "Your name"}
+              placeholder={"Type Query Here...."}
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
               autoFocus
