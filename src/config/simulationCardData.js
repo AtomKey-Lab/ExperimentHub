@@ -90,7 +90,52 @@ export const cardData = [
       "link": "/hookslaw",
       "category": "Physics"
 
-    }
+    },
+    {
+      "title": "Energy Form And Change",
+      "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
+    "image": "https://i.pinimg.com/564x/e0/ee/ac/e0eeac1a4af8113c1a3507e6734a1685.jpg",
+      "buttonText": "Explore",
+      "link": "/energyform",
+      "category": "Chemistry"
+
+    },
+    {
+      "title": "Concentration",
+      "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
+    "image": "https://i.pinimg.com/564x/e0/ee/ac/e0eeac1a4af8113c1a3507e6734a1685.jpg",
+      "buttonText": "Explore",
+      "link": "/concentration",
+      "category": "Chemistry"
+
+    },
+    {
+      "title": " Balancing Act",
+      "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
+    "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
+      "buttonText": "Explore",
+      "link": "/balancing",
+      "category": "Physics"
+
+    },
+    {
+      "title": " Force",
+      "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
+    "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
+      "buttonText": "Explore",
+      "link": "/force",
+      "category": "Physics"
+
+    },
+    {
+      "title": "Sound Waves",
+      "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
+    "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
+      "buttonText": "Explore",
+      "link": "/soundwaves",
+      "category": "Physics"
+
+    },
      
 
 ]     
