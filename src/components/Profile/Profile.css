@@ -97,7 +97,7 @@
   }
   
   .dashboard__sidebar {
-    flex: 0 0 300px;
+    flex: 0 0 400px;
   }
   
   .dashboard__main {
@@ -370,4 +370,34 @@
       width: 100%;
       justify-content: space-between;
     }
+  }
+  .dashboard__stat-item {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .dashboard__stat-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .dashboard__pie-container {
+    flex: 1;
+    min-width: 900px; /* Increased width */
+    max-width: 600px; /* Optional: control the max size */
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .dashboard__chart{
+    background-color: white;
+    width:"600px";
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+   margin-top: 20px;
+   font-size: 1.1rem;
+   color: #4361ee;
   }
