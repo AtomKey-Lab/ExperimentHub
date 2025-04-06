@@ -73,96 +73,66 @@ export const gravitationTheory = {
     }
   };
   
-  export const AcidBase ={
- 
-      
-      cationAnalysis: {
-        overview: "Systematic qualitative analysis of cations involves dividing them into groups based on their selective precipitation with specific reagents, followed by confirmatory tests.",
-        
-        generalProcedure: [
-          "1. **Preliminary Tests**: Flame test, solubility check, reaction with dilute HCl, H₂SO₄, etc.",
-          "2. **Group Separation**: Sequential addition of group reagents to precipitate cations.",
-          "3. **Confirmatory Tests**: Identification of individual cations using specific reactions."
-        ],
-    
-        analysisGroups: [
+  // theory.js
+  export const AcidBase = {
+    overview: `The pH test is used to determine whether a substance is acidic, basic, or neutral. This is done by using indicators that change color depending on the pH of the solution.`,
+  
+    generalProcedure: [
+      "Take a small amount of the solution in a test tube.",
+      "Add a few drops of an indicator (like litmus, phenolphthalein, or methyl orange).",
+      "Observe the color change.",
+      "Compare the color with the standard pH scale to determine the nature of the solution."
+    ],
+  
+    analysisGroups: [
+      {
+        group: "Litmus Paper Test",
+        reagent: "Blue or Red Litmus Paper",
+        cations: [
           {
-            group: "Group I (Silver Group)",
-            reagent: "Dilute HCl",
-            cations: [
-              {
-                name: "Ag⁺ (Silver)",
-                precipitate: "White AgCl (soluble in NH₄OH)",
-                confirmatoryTest: "Dissolves in NH₄OH → reprecipitates with HNO₃"
-              },
-              {
-                name: "Pb²⁺ (Lead)",
-                precipitate: "White PbCl₂ (soluble in hot water)",
-                confirmatoryTest: "Yellow PbCrO₄ with K₂CrO₄"
-              },
-              {
-                name: "Hg₂²⁺ (Mercury I)",
-                precipitate: "White Hg₂Cl₂ (turns black with NH₄OH)",
-                confirmatoryTest: "Black mixture of Hg + HgNH₂Cl with NH₄OH"
-              }
-            ]
+            name: "Acidic Solution",
+            precipitate: "Turns blue litmus red",
+            confirmatoryTest: "Confirms presence of H⁺ ions"
           },
           {
-            group: "Group II (Copper-Arsenic Group)",
-            subGroups: {
-              IIA: "Cu²⁺, Pb²⁺, Bi³⁺, Cd²⁺ (Acid-insoluble sulfides)",
-              IIB: "As³⁺, Sb³⁺, Sn²⁺ (Thio-complex forming)"
-            },
-            reagent: "H₂S gas in 0.3M HCl",
-            cations: [
-              {
-                name: "Cu²⁺ (Copper)",
-                precipitate: "Black CuS",
-                confirmatoryTest: "Blue [Cu(NH₃)₄]²⁺ in NH₄OH"
-              },
-              {
-                name: "As³⁺ (Arsenic)",
-                precipitate: "Yellow As₂S₃",
-                confirmatoryTest: "Gives garlic odor when heated + yellow precipitate with (NH₄)₂MoO₄"
-              }
-            ]
+            name: "Basic Solution",
+            precipitate: "Turns red litmus blue",
+            confirmatoryTest: "Confirms presence of OH⁻ ions"
+          }
+        ]
+      },
+      {
+        group: "Phenolphthalein Test",
+        reagent: "Phenolphthalein",
+        cations: [
+          {
+            name: "Acidic/Neutral Solution",
+            precipitate: "Remains colorless",
+            confirmatoryTest: "No OH⁻ ions present"
           },
           {
-            group: "Group III (Iron Group)",
-            reagent: "NH₄Cl + NH₄OH (pH ~8-9)",
-            cations: [
-              {
-                name: "Fe³⁺ (Iron III)",
-                precipitate: "Red-brown Fe(OH)₃",
-                confirmatoryTest: "Blood red color with KSCN or blue Prussian blue with K₄[Fe(CN)₆]"
-              },
-              {
-                name: "Al³⁺ (Aluminum)",
-                precipitate: "White gelatinous Al(OH)₃",
-                confirmatoryTest: "Red lake with alizarin dye"
-              }
-            ]
+            name: "Basic Solution",
+            precipitate: "Turns pink",
+            confirmatoryTest: "Confirms presence of OH⁻ ions"
+          }
+        ]
+      },
+      {
+        group: "Methyl Orange Test",
+        reagent: "Methyl Orange",
+        cations: [
+          {
+            name: "Acidic Solution",
+            precipitate: "Turns red",
+            confirmatoryTest: "Confirms acidic nature"
           },
-          // ... (similarly for Groups IV-VI)
-        ],
-    
-        specialTests: {
-          flameTests: [
-            "Na⁺: Persistent yellow flame",
-            "K⁺: Violet flame (view through cobalt glass)",
-            "Ca²⁺: Brick red flame"
-          ],
-          dryTests: [
-            "Ammonium (NH₄⁺): Pungent smell with NaOH on heating",
-            "Carbonate (CO₃²⁻): Effervescence with dilute acid"
-          ]
-        },
-    
-        notes: [
-          "• Always perform group separation in sequence (I → VI)",
-          "• Wash precipitates with hot water to remove adsorbed ions",
-          "• Use fresh reagents for sulfides (H₂S decays rapidly)"
+          {
+            name: "Basic Solution",
+            precipitate: "Turns yellow",
+            confirmatoryTest: "Confirms basic nature"
+          }
         ]
       }
-    }
+    ]
+  };
   

@@ -1,27 +1,31 @@
 import React from 'react';
-import { gravitationProcedureData, chemistryprocedureData } from '../../config/procedureData';
+import {
+  gravitationProcedureData,
+  chemistryprocedureData,
+  acidBaseProcedureData
+} from '../../config/procedureData';
 import './procedure.css';
 
 function Procedure() {
-  // Get the current path from the URL
   const path = window.location.pathname;
-  
-  // Define variables to store experiment data based on the path
+
   let experimentData;
 
   if (path.includes('chemistry')) {
     experimentData = chemistryprocedureData;
   } else if (path.includes('gravitation')) {
     experimentData = gravitationProcedureData;
+  } else if (path.includes('acidbase')) {
+    experimentData = acidBaseProcedureData;
   }
 
   return (
     <div className="procedure-container">
-      {/* Conditional rendering based on the URL */}
       {path.includes('chemistry') && <h1 className="procedure-title">Chemistry - Procedure</h1>}
       {path.includes('gravitation') && <h1 className="procedure-title">Gravitation - Procedure</h1>}
+      {path.includes('acidbase') && <h1 className="procedure-title">Acid-Base - Procedure</h1>}
 
-      {experimentData && (
+      {experimentData ? (
         <>
           {Object.values(experimentData).map((experiment, idx) => (
             <div key={idx} className="experiment-section">
@@ -37,9 +41,9 @@ function Procedure() {
             </div>
           ))}
         </>
+      ) : (
+        <p>This is the main content of the Procedure component.</p>
       )}
-
-      {!experimentData && <p>This is the main content of the Procedure component.</p>}
     </div>
   );
 }

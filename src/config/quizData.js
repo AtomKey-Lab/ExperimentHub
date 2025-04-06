@@ -182,4 +182,80 @@ export const gravitationalQuestions = [
       ],
     },
   ];
+
+  export const acidBaseQuestions = [
+    {
+      questionText: "What is the pH value of a neutral solution?",
+      answerOptions: [
+        { answerText: "7", isCorrect: true },
+        { answerText: "0", isCorrect: false },
+        { answerText: "14", isCorrect: false },
+        { answerText: "1", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "Which of the following substances is a base?",
+      answerOptions: [
+        { answerText: "Sodium hydroxide (NaOH)", isCorrect: true },
+        { answerText: "Hydrochloric acid (HCl)", isCorrect: false },
+        { answerText: "Vinegar", isCorrect: false },
+        { answerText: "Citric acid", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "Which of the following is commonly used to test the pH of a solution?",
+      answerOptions: [
+        { answerText: "Litmus paper", isCorrect: true },
+        { answerText: "Filter paper", isCorrect: false },
+        { answerText: "Glass rod", isCorrect: false },
+        { answerText: "Thermometer", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "Which color does blue litmus paper turn in acidic solution?",
+      answerOptions: [
+        { answerText: "Red", isCorrect: true },
+        { answerText: "Blue", isCorrect: false },
+        { answerText: "Green", isCorrect: false },
+        { answerText: "No change", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "A substance with a pH of 13 is considered:",
+      answerOptions: [
+        { answerText: "Strongly basic", isCorrect: true },
+        { answerText: "Weakly acidic", isCorrect: false },
+        { answerText: "Neutral", isCorrect: false },
+        { answerText: "Strongly acidic", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "Which gas is released when an acid reacts with a metal carbonate?",
+      answerOptions: [
+        { answerText: "Carbon dioxide", isCorrect: true },
+        { answerText: "Oxygen", isCorrect: false },
+        { answerText: "Hydrogen", isCorrect: false },
+        { answerText: "Nitrogen", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "What is the pH range of acids?",
+      answerOptions: [
+        { answerText: "0 to 6.9", isCorrect: true },
+        { answerText: "7 to 14", isCorrect: false },
+        { answerText: "Exactly 7", isCorrect: false },
+        { answerText: "Above 14", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "Which of the following is a weak acid?",
+      answerOptions: [
+        { answerText: "Acetic acid", isCorrect: true },
+        { answerText: "Sulfuric acid", isCorrect: false },
+        { answerText: "Nitric acid", isCorrect: false },
+        { answerText: "Hydrochloric acid", isCorrect: false },
+      ],
+    }
+  ];
+  
   
