@@ -1,8 +1,8 @@
 import React from 'react';
 import './theory.css';
-import { gravitationTheory, chemistryTheory } from '../../config/theory';
+import { gravitationTheory, chemistryTheory, AcidBase } from '../../config/theory';
 
-function App() {
+function Theory() {
   const path = window.location.pathname;
 
   return (
@@ -28,22 +28,6 @@ function App() {
               <strong>Preparation:</strong> {chemistryTheory.phenolFormaldehydeResin.preparation}
             </p>
           </div>
-
-          <div className="resin">
-            <h1 className="title">Urea Formaldehyde Resin</h1>
-            <p className="description">{chemistryTheory.ureaFormaldehydeResin.description}</p>
-            <h3 className="subtitle">Production Steps:</h3>
-            <ul className="list">
-              <li className="list-item">{chemistryTheory.ureaFormaldehydeResin.productionSteps.stageOne}</li>
-              <li className="list-item">{chemistryTheory.ureaFormaldehydeResin.productionSteps.stageTwo}</li>
-            </ul>
-            <h3 className="subtitle">Uses:</h3>
-            <ul className="list">
-              {chemistryTheory.ureaFormaldehydeResin.uses.map((use, idx) => (
-                <li key={idx} className="list-item">{use}</li>
-              ))}
-            </ul>
-          </div>
         </div>
       )}
 
@@ -61,35 +45,40 @@ function App() {
               </li>
             ))}
           </ul>
-          <h3 className="subtitle">Properties:</h3>
-          <ul className="list">
-            {gravitationTheory.properties.map((prop, idx) => (
-              <li key={idx} className="list-item">{prop}</li>
-            ))}
-          </ul>
-          <h3 className="subtitle">Uses:</h3>
-          <ul className="list">
-            {gravitationTheory.uses.map((use, idx) => (
-              <li key={idx} className="list-item">{use}</li>
-            ))}
-          </ul>
-          <h3 className="subtitle">Applications:</h3>
-          <ul className="list">
-            {gravitationTheory.applications.map((app, idx) => (
-              <li key={idx} className="list-item">{app}</li>
-            ))}
-          </ul>
-          <p className="description">
-            <strong>Future Research:</strong> {gravitationTheory.futureResearch}
-          </p>
         </div>
       )}
 
-      {!path.includes('chemistry') && !path.includes('gravitation') && (
+      {path.includes('AcidBase') && (
+        <div className="section cation-section">
+          <h1 className="title">Cation Analysis</h1>
+          <p className="description">{cationAnalysis.overview}</p>
+          <h3 className="subtitle">General Procedure:</h3>
+          <ul className="list">
+            {cationAnalysis.generalProcedure.map((step, idx) => (
+              <li key={idx} className="list-item">{step}</li>
+            ))}
+          </ul>
+          {cationAnalysis.analysisGroups.map((group, idx) => (
+            <div key={idx} className="cation-group">
+              <h2 className="subtitle">{group.group}</h2>
+              <p><strong>Reagent:</strong> {group.reagent}</p>
+              {group.cations.map((cation, index) => (
+                <div key={index}>
+                  <p><strong>Cation:</strong> {cation.name}</p>
+                  <p><strong>Precipitate:</strong> {cation.precipitate}</p>
+                  <p><strong>Confirmatory Test:</strong> {cation.confirmatoryTest}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {!path.includes('chemistry') && !path.includes('gravitation') && !path.includes('AcidBase') && (
         <p className="fallback-text">This is the main content of the Procedure component.</p>
       )}
     </div>
   );
 }
 
-export default App;
+export default Theory;

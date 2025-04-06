@@ -1,67 +1,58 @@
 import React, { useState } from 'react';
-import '../login/login.css';
-import logo from '../../Assets/logo.jpg';
-import { FcGoogle } from 'react-icons/fc';
-import PasswordToggle from '../hooks/PasswordToggle';
 import { useNavigate } from 'react-router-dom';
+import './Forgot.css';
+import logo from '../../Assets/logo.jpg';
 
 const Forgot = () => {
-  const initialData = {
-    email: "",
-    password: ""
-  };
-
- 
-  const [inputData, setInputData] = useState(initialData);
-  const [errorMessage, setErrorMessage] = useState("");
-
-
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setInputData(prevState => ({ ...prevState, [name]: value }));
-  };
-  console.log(inputData);
-
-  const handleSubmit = (event) => {
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const handleReset = (event) => {
     event.preventDefault();
-    if (!inputData.email) {
-      setErrorMessage("Credentials not found");
-    }else if(!emailPattern.test(inputData.email)){
-      setErrorMessage("Enter email in correct format")
+
+    if (!email) {
+      setMessage("Please enter your registered email.");
+      return;
     }
+
+    // Simulating email reset process (No actual email is sent)
+    setMessage("Reset link sent! Check your email.");
+    
+    setTimeout(() => {
+      navigate("/login"); // Redirect to login after showing message
+    }, 3000);
   };
 
-  
   return (
-      <form className="App">
+    <div>
+      <form className="App-login">
         <header className="App-header">
           <div className="logo-container">
-            <img src={logo} alt="BeatVibe Logo" className="logo" />
-            <h1 className='Title-Login'>Virtual Lab</h1>
+            <img src={logo} alt="Logo" className="logo" />
+            <h1 className='Title-Login'>AtomKey Lab</h1>
           </div>
         </header>
 
-        <div className='container'>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        <div className='container-login'>
+          {message && <p className="error-message">{message}</p>}
+
           <div className='inputs'>
             <input
               type='email'
-              placeholder='Username or Email'
+              placeholder='Enter registered email'
               name="email"
-              value={inputData.email}
-              onChange={handleInputChange}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-        </div>
-        <div className='links'>
-          <a href="/logIn" className="navigating-link">Get back to login page</a>
-        </div>
-      </div>
+          </div>
 
-        <button className='submit-button' onClick={handleSubmit}>Send otp</button>
-    </form>
+          <button className='submit-button' onClick={handleReset}>Reset Password</button>
+          <h4 className='or'>or</h4>
+          <a href="/login" className="navigating-link">Back to Log In</a>
+        </div>
+      </form>
+    </div>
   );
 };
 

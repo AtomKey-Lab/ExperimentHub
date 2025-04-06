@@ -1,10 +1,33 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { headerdata } from '../../config/headerdata';
 import logo from "./../../Assets/logo.jpg";
 import './navbar.css';
 
 const Header = ({ menuActive }) => {
   const data = headerdata || [];
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    const userEmail = localStorage.getItem('userEmail');
+    const storedUserName = localStorage.getItem('userName');
+
+    if (userEmail) {
+      setIsLoggedIn(true);
+      setUserName(storedUserName || "User");
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userName');
+    setIsLoggedIn(false);
+    navigate("/login");
+  };
 
   return (
     <div className='header-container'>
@@ -12,12 +35,7 @@ const Header = ({ menuActive }) => {
         <nav className="navbar">
           <div className="nav-logo">
             <NavLink to="/">
-              <img
-                src={logo || 'fallback-image.png'}
-                alt="brand logo"
-                className='brand-logo'
-                
-              />
+              <img src={logo || 'fallback-image.png'} alt="brand logo" className='brand-logo' />
             </NavLink>
             <p className='title'>AtomKey Lab</p>
           </div>
@@ -27,31 +45,50 @@ const Header = ({ menuActive }) => {
               <li className="nav-item" key={index}>
                 <NavLink
                   to={item.to}
+                  className="nav-link"
                   style={({ isActive }) => ({
                     color: isActive ? 'black' : 'aquamarine',
-                    transition: 'color 0.3s ease'
+                    textDecoration: 'none', // Ensures no underline
+                    transition: 'color 0.3s ease, font-size 0.3s ease'
                   })}
-                  className="nav"
                   aria-label={item.name}
                 >
                   {item.name}
                 </NavLink>
               </li>
             ))}
+          </ul>
+
+          {/* Profile & Logout Section */}
+          {isLoggedIn ? (
+            <div className="nav-actions">
+              <NavLink 
+                to="/profile" 
+                className="profile-link"
+                aria-label="Profile"
+                style={{ textDecoration: 'none' }} // Ensures no underline
+              >
+                Profile 
+              </NavLink>
+
+              <button onClick={handleLogout} className="logout-button">Log Out</button>
+            </div>
+          ) : (
             <span className='login-button'>
               <NavLink
                 to="/login"
+                className="nav-link"
                 style={({ isActive }) => ({
                   color: isActive ? 'black' : 'aquamarine',
-                  transition: 'color 0.3s ease'
+                  textDecoration: 'none', // Ensures no underline
+                  transition: 'color 0.3s ease, font-size 0.3s ease'
                 })}
-                className="nav"
                 aria-label="Login"
               >
-                LogOut
+                Log In
               </NavLink>
             </span>
-          </ul>
+          )}
         </nav>
       </header>
     </div>

@@ -5,7 +5,7 @@ import Footer from '../../components/footer/footer';
 import Navbar2 from '../../components/navbar/navbar2'; 
 
 
-function Gravitation() {
+function chemistry() {
   return (
     <div className="gravitation-container">
       <Navbar />
@@ -25,4 +25,4 @@ function Gravitation() {
   );
 }
 
-export default Gravitation;
+export default chemistry;

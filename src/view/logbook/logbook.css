@@ -1,77 +1,203 @@
-.log-container{
-   display: flex;
-   justify-content: center;
- 
-   
- 
-}  
+/* Main Container and Background Styling */
+.logBook-body {
+  padding: 30px 0;
+  /* Background is kept transparent to allow the Background component to show through */
+}
 
-  h1 {
-    text-align: center;
+/* Title Styling */
+.Logbook-title {
+  color: #16325B;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+/* Log Container */
+.log-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* Form and Entry Styling */
+.log-form, .log-entry {
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px 0;
+  width: 80%;
+  border: 1px solid rgba(96, 139, 193, 0.3);
+  box-shadow: 0 5px 20px rgba(96, 139, 193, 0.4);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.log-form:hover, .log-entry:hover {
+  box-shadow: 0 8px 25px rgba(96, 139, 193, 0.5);
+  transform: translateY(-5px);
+}
+
+/* Section Headers */
+.log-form h3, .log-entries h3 {
+  margin: 25px 0 15px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #16325B, #2a4c8a);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(22, 50, 91, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.log-form h3::before, .log-entries h3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.log-form h3:hover::before, .log-entries h3:hover::before {
+  left: 100%;
+}
+
+/* Input Fields */
+input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px 15px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  background-color: rgba(63, 89, 68, 0.4); /* Preserved your original background color */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #608BC1;
+  box-shadow: 0 0 0 3px rgba(96, 139, 193, 0.2);
+  background-color: rgba(63, 89, 68, 0.5); /* Slightly darker on focus */
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Button Styling */
+.button-logBook {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.button-logBook:hover {
+  background: linear-gradient(135deg, #2980b9, #1c6291);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.button-logBook:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-logBook::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.button-logBook:hover::before {
+  left: 100%;
+}
+
+/* Log Entry Styling */
+.log-entries {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.log-entry {
+  background-color: #f8fafc;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.log-entry h4 {
+  margin: 0 0 15px 0;
+  padding-bottom: 10px;
+  font-size: 1.4rem;
+  color: #16325B;
+  border-bottom: 2px solid rgba(96, 139, 193, 0.3);
+}
+
+.log-entry h4 span {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+.log-entry p {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.log-entry p strong {
+  color: #2d3748;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .log-form, .log-entry, .log-entries {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Logbook-title {
+    font-size: 2rem;
   }
   
-  .log-form, .log-entry {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-    width: 50%;
-    border:0.5px solid #608BC1;
-    box-shadow: 0px 0px 10px 2px #608BC1;
-    background-color: white;
+  .log-form, .log-entry, .log-entries {
+    width: 95%;
+    padding: 20px;
   }
   
   .log-form h3, .log-entries h3 {
-    
-    margin-bottom: 10px;
-    text-align: center;
-    background-color: #16325B;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    border:1px solid #608BC1;
-    color: white;
+    font-size: 1rem;
   }
-  
-  input, textarea {
-    width: 100%;
-    margin: 5px 0;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #3f594466;
-  }
-  
-.button-logBook {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-    font-size: 17px;
-  }
-  
-.button-logBook:hover {
-    background-color: #2e87c2;
-  }
-  
-  .log-entry {
-    background-color: #f9f9f9;
-    margin-bottom: 15px;
-
-  }
-  
-  .log-entry h4 {
-    margin: 0;
-    font-size: 1.2em;
-    
-  }
-  .Logbook-title{
-    color: rgb(44, 16, 111);
-  }
-  
+}
