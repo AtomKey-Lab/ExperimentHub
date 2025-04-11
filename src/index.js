@@ -31,6 +31,8 @@ import Concentration from './view/Experiments/Concentration/Concentration'
 import Balancing from './view/Experiments/Balancing/Balancing'
 import Force from './view/Experiments/Force/Force'
 import SoundWaves from './view/Experiments/SoundWaves/SoundWaves'
+import Syllabus from './components/Syllabus/Syllabus'
+
 
 
 const root =reactDom.createRoot(document.getElementById('root'))
@@ -65,6 +67,7 @@ root.render(
         <Route path="/balancing" element={<Balancing/>}/>
         <Route path="/force" element={<Force/>}/>
         <Route path="/soundwaves" element={<SoundWaves/>}/>
+        <Route path="/syllabus" element={<Syllabus/>}/>
         
         
     </Routes>

@@ -1,23 +1,67 @@
 .category-buttons {
-    display: flex;
-    justify-content: center; /* Centers the buttons horizontally */
-    align-items: center; /* Centers vertically if needed */
-    gap: 20px; /* Adds space between buttons */
-    margin: 20px 0; /* Adds margin for spacing */
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.category-buttons button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f5f7fa;
+  color: #4a5568;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.category-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-buttons button.active {
+  background-color: #0c4a6b;
+  color: white;
+  box-shadow: 0 4px 8px rgba(12, 74, 107, 0.25);
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0;
+}
+
+.search-container input {
+  padding: 14px 20px;
+  width: 350px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: #f9fafb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: #0c4a6b;
+  box-shadow: 0 0 0 3px rgba(12, 74, 107, 0.15);
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+  .category-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   
-  .category-buttons button {
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    background-color: #0c4a6b;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  .search-container input {
+    width: 85%;
+    max-width: 350px;
   }
-  
-  .category-buttons button:hover {
-    background-color: #092c44;
-  }
-  
+}
