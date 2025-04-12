@@ -48,7 +48,7 @@ const Header = ({ menuActive }) => {
                   className="nav-link"
                   style={({ isActive }) => ({
                     color: isActive ? 'black' : 'aquamarine',
-                    textDecoration: 'none', // Ensures no underline
+                    textDecoration: 'none',
                     transition: 'color 0.3s ease, font-size 0.3s ease'
                   })}
                   aria-label={item.name}
@@ -59,14 +59,13 @@ const Header = ({ menuActive }) => {
             ))}
           </ul>
 
-          {/* Profile & Logout Section */}
           {isLoggedIn ? (
             <div className="nav-actions">
               <NavLink 
                 to="/profile" 
                 className="profile-link"
                 aria-label="Profile"
-                style={{ textDecoration: 'none' }} // Ensures no underline
+                style={{ textDecoration: 'none' }}
               >
                 Profile 
               </NavLink>
@@ -80,7 +79,7 @@ const Header = ({ menuActive }) => {
                 className="nav-link"
                 style={({ isActive }) => ({
                   color: isActive ? 'black' : 'aquamarine',
-                  textDecoration: 'none', // Ensures no underline
+                  textDecoration: 'none',
                   transition: 'color 0.3s ease, font-size 0.3s ease'
                 })}
                 aria-label="Login"

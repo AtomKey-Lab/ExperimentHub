@@ -6,6 +6,6 @@ export const headerdata = [
   { name: 'Syllabus', to: '/syllabus' },
   { name: 'Contact', to: '/contact' },
   { name: 'About', to: '/about' },
-
+  
 ];
 

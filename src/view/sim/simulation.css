@@ -65,3 +65,38 @@
     max-width: 350px;
   }
 }
+/* Add this to your CSS */
+.app-wrapper {
+  position: relative;
+  min-height: 100vh; /* Ensure the app wrapper takes at least the full viewport height */
+}
+
+.app-body {
+  padding-bottom: 60px; /* Ensure there's space for the footer */
+}
+
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 1000; /* Ensure the button stays on top */
+}
+
+.chat-sidebar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  background-color: white;
+  border-left: 1px solid #ddd;
+  transition: transform 0.3s ease;
+  transform: translateX(100%); /* Hide initially */
+  z-index: 999; /* Ensure the sidebar stays on top */
+}
+
+.chat-sidebar.open {
+  transform: translateX(0); /* Show the sidebar when open */
+}

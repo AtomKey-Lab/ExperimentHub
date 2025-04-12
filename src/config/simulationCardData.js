@@ -136,6 +136,46 @@ export const cardData = [
       "category": "Physics"
 
     },
+    {
+      "title": "pH Simulation",
+      "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
+    "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
+      "buttonText": "Explore",
+      "link": "/soundwaves",
+      "category": "Chemistry"
+    },
+    {
+      "title": "Electrolysis Simulation",
+      "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
+    "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
+      "buttonText": "Explore",
+      "link": "/soundwaves",
+      "category": "Chemistry"
+    },
+    {
+      "title": "Glass Slab Simulation",
+      "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
+    "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
+      "buttonText": "Explore",
+      "link": "/soundwaves",
+      "category": "Physics"
+    },
+    {
+      "title": "Resistance of Resistors in Series and Parallel Simulation",
+      "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
+    "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
+      "buttonText": "Explore",
+      "link": "/soundwaves",
+      "category": "Physics"
+    },
+    {
+      "title": "Convex Lens and Concave Mirror Simulation",
+      "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
+    "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
+      "buttonText": "Explore",
+      "link": "/soundwaves",
+      "category": "Physics"
+    },
      
 
 ]     
