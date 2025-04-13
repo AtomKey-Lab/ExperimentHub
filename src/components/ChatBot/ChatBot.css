@@ -430,7 +430,7 @@
 .chat-sidebar .chat-interface {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 300vh
 }
 
 /* Make the messages area flexible */
