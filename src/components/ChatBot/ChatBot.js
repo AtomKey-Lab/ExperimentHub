@@ -60,7 +60,7 @@ const ChatBot = () => {
     if (!userName && showWelcome === false) {
       setUserName(inputText);
       setMessages([...messages, { type: "user", text: inputText }]);
-      
+
       // Start welcome message typing effect
       const welcomeMsg = `Great to meet you, ${inputText}! How can I help you today?`;
       setTimeout(() => {
@@ -73,7 +73,7 @@ const ChatBot = () => {
           { type: "bot", text: "", isTyping: true }
         ]);
       }, 500);
-      
+
       setInputText("");
       return;
     }
@@ -107,7 +107,7 @@ const ChatBot = () => {
       const generatedText =
         data.candidates?.[0]?.content?.parts?.[0]?.text ||
         "I couldn't generate a response. Please try again.";
-      
+
       // Start typewriter effect
       setTimeout(() => {
         setLoading(false);
@@ -120,15 +120,12 @@ const ChatBot = () => {
           { type: "bot", text: "", isTyping: true }
         ]);
       }, 700);
-      
+
     } catch (err) {
       setTimeout(() => {
         setMessages([
           ...updatedMessages,
-          { 
-            type: "bot", 
-            text: "Sorry, I encountered an error. Please try again later." 
-          }
+          { type: "bot", text: "Sorry, I encountered an error. Please try again later." }
         ]);
         setLoading(false);
       }, 500);
@@ -157,12 +154,7 @@ const ChatBot = () => {
           <button onClick={startChat} className="get-started-button">
             Get Started
           </button>
-          <p className="get-started-text">
-            Already have an account?{" "}
-            <a href="#" className="login-link">
-              Log In
-            </a>
-          </p>
+         
         </div>
       </div>
     );
@@ -177,11 +169,11 @@ const ChatBot = () => {
         </div>
       );
     }
-    
+
     if (message.isResponse) {
       return (
         <div className="response-box">
-          <h4 className="response-title"> Response</h4>
+          <h4 className="response-title">Response</h4>
           <div className="response-content">{message.text}</div>
         </div>
       );
