@@ -139,17 +139,17 @@ export const cardData = [
     {
       "title": "pH Simulation",
       "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
-    "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
+    "image": "https://i.pinimg.com/564x/e0/ee/ac/e0eeac1a4af8113c1a3507e6734a1685.jpg",
       "buttonText": "Explore",
-      "link": "/soundwaves",
+      "link": "/pH",
       "category": "Chemistry"
     },
     {
       "title": "Electrolysis Simulation",
       "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
-    "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
+    "image": "https://i.pinimg.com/564x/e0/ee/ac/e0eeac1a4af8113c1a3507e6734a1685.jpg",
       "buttonText": "Explore",
-      "link": "/soundwaves",
+      "link": "/electrolysis",
       "category": "Chemistry"
     },
     {
@@ -157,7 +157,7 @@ export const cardData = [
       "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
     "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
       "buttonText": "Explore",
-      "link": "/soundwaves",
+      "link": "/glassslab",
       "category": "Physics"
     },
     {
@@ -165,7 +165,7 @@ export const cardData = [
       "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
     "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
       "buttonText": "Explore",
-      "link": "/soundwaves",
+      "link": "/resistance",
       "category": "Physics"
     },
     {
@@ -173,7 +173,7 @@ export const cardData = [
       "description": "Dive into interactive physics simulations to understand core concepts in a risk-free environment.",
     "image": "https://i.pinimg.com/236x/4c/97/3b/4c973ba7fff16c393e427326109b63a4.jpg",
       "buttonText": "Explore",
-      "link": "/soundwaves",
+      "link": "/convexconcave",
       "category": "Physics"
     },
      
