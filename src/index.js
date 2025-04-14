@@ -32,6 +32,12 @@ import Balancing from './view/Experiments/Balancing/Balancing'
 import Force from './view/Experiments/Force/Force'
 import SoundWaves from './view/Experiments/SoundWaves/SoundWaves'
 import Syllabus from './components/Syllabus/Syllabus'
+import Electrolysis from './view/Experiments/Electrolysis/Electrolysis'
+import Phsimulation from './view/Experiments/Phsimulation/Phsimulation'
+import GlassSlab from './view/Experiments/GlassSlab/GlassSlab'
+import ResistanceResistors from './view/Experiments/ResistanceResistors/ResistanceResistors'
+import ConvexConcave from './view/Experiments/ConvexConcave/ConvexConcave'
+
 
 
 
@@ -68,6 +74,12 @@ root.render(
         <Route path="/force" element={<Force/>}/>
         <Route path="/soundwaves" element={<SoundWaves/>}/>
         <Route path="/syllabus" element={<Syllabus/>}/>
+        <Route path="/electrolysis" element={<Electrolysis/>}/>
+        <Route path="/pH" element={<Phsimulation/>}/>
+        <Route path="/glassslab" element={<GlassSlab/>}/>
+        <Route path="/resistance" element={<ResistanceResistors/>}/>
+        <Route path="/convexconcave" element={<ConvexConcave/>}/>
+     
         
         
     </Routes>
