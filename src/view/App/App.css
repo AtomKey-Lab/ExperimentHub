@@ -182,3 +182,7 @@
   box-shadow: none;
 }
 
+.chat-sidebar.open {
+  height: 100vh;
+  width: 350px;
+}

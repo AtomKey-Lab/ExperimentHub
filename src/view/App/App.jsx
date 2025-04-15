@@ -31,8 +31,8 @@ function App() {
       <Footer />
 
       {/* ChatBot Button */}
-      <div 
-        className={`chat-button ${chatOpen ? 'active' : ''}`} 
+      <div
+        className={`chat-button ${chatOpen ? 'active' : ''}`}
         onClick={toggleChat}
       >
         {chatOpen ? 
@@ -54,4 +54,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;

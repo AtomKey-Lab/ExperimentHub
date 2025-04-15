@@ -3,7 +3,7 @@ import navLinksData from '../../config/navbar2Data';
 import './navbar2.css';
 
 import Theory from './../theory/theory';
-import Video from './../video/video';
+
 import Procedure from '../procedure/procedure';
 import Experiment from '../experiment/experiment';
 import Quiz from '../quiz/quiz';
@@ -16,7 +16,7 @@ function Navbar2({link,title}) {
     Theory: <Theory />,
     Procedure: <Procedure />,
     Quiz: <Quiz />,
-    Video: <Video />,
+    
     Experiment: <Experiment />,
     ChatBot: <ChatBot />,
   };

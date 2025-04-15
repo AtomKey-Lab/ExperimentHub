@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Background from '../../components/background/Background';
 import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
-import './Syllabus.css';
 import chemistrySimulations from '../../config/syllabuschemi';
 import physicsSimulations from '../../config/syllabusphy';
 import ChatBot from '../ChatBot/ChatBot';
+import './Syllabus.css';
 
 const ArrowIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -16,115 +16,120 @@ const ArrowIcon = () => (
 
 export default function Syllabus() {
   const [selectedCategory, setSelectedCategory] = useState('chemistry');
-  const [isAnimating, setIsAnimating] = useState(false);
   const [filteredSimulations, setFilteredSimulations] = useState([]);
-    const [chatOpen, setChatOpen] = useState(false);
-  
-    const toggleChat = () => {
-      setChatOpen(!chatOpen);
-    };
-  
+  const [chatOpen, setChatOpen] = useState(false);
 
-  // Manual simulations using public folder paths
+  const toggleChat = () => setChatOpen(!chatOpen);
+
   const manualSimulations = [
     { 
       name: 'CBSC Manual', 
-      description: 'Download CBSC Board Manual', 
-      pdf: `${process.env.PUBLIC_URL}/pdf/CBSC Board Manual.pdf` 
+      description: 'Comprehensive guide for CBSC Board curriculum with detailed explanations and practice materials', 
+      pdf: `${process.env.PUBLIC_URL}/pdf/CBSC Board Manual.pdf`,
+      sub: 'PDF' 
     },
     { 
       name: 'ICSE Manual', 
-      description: 'Download ICSE Board Manual', 
-      pdf: `${process.env.PUBLIC_URL}/pdf/ICSE Board Manual.pdf` 
+      description: 'Complete reference manual for ICSE Board students with curriculum highlights and examples', 
+      pdf: `${process.env.PUBLIC_URL}/pdf/ICSE Board Manual.pdf`,
+      sub: 'PDF' 
     },
     { 
       name: 'Maharashtra Manual', 
-      description: 'Download Maharashtra Board Manual', 
-      pdf: `${process.env.PUBLIC_URL}/pdf/Maharashtra Board Manual.pdf` 
+      description: 'Official curriculum guide for Maharashtra Board with chapter-wise resources and guidelines', 
+      pdf: `${process.env.PUBLIC_URL}/pdf/Maharashtra Board Manual.pdf`,
+      sub: 'PDF'
     },
   ];
 
-  const currentSimulations = selectedCategory === 'chemistry' 
-    ? chemistrySimulations 
-    : selectedCategory === 'physics' 
-    ? physicsSimulations 
-    : manualSimulations;
-
   useEffect(() => {
-    setFilteredSimulations(currentSimulations);
-    
-    setIsAnimating(true);
-    const timer = setTimeout(() => {
-      setIsAnimating(false);
-    }, 300);
-    
-    return () => clearTimeout(timer);
-  }, [currentSimulations]);
+    if (selectedCategory === 'chemistry') {
+      setFilteredSimulations(chemistrySimulations);
+    } else if (selectedCategory === 'physics') {
+      setFilteredSimulations(physicsSimulations);
+    } else if (selectedCategory === 'manual') {
+      setFilteredSimulations(manualSimulations);
+    }
+  }, [selectedCategory]);
 
   const handleCategoryChange = (category) => {
-    if (category !== selectedCategory) {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setSelectedCategory(category);
-      }, 300);
+    setSelectedCategory(category);
+  };
+
+  const handleDownload = (link) => {
+    if (selectedCategory === 'manual') {
+      // Download behavior for Manuals (PDF files)
+      const linkElement = document.createElement('a');
+      linkElement.href = link;
+      linkElement.download = link.split('/').pop(); // Extracts file name for download
+      document.body.appendChild(linkElement);
+      linkElement.click();
+      document.body.removeChild(linkElement);
+    } else {
+      // Explore behavior for other categories (opens in new tab)
+      window.open(link, '_blank');
     }
   };
 
-  const handleDownload = (filePath) => {
-    const link = document.createElement('a');
-    link.href = filePath;
-    link.download = filePath.split('/').pop();
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
-    <div>
+    <div className="syllabus-page">
       <Background />
       <Navbar />
-      
+
       <div className="syllabus-container">
-        <div className="button-group">
+        <div className="category-tabs">
           <button 
-            className={selectedCategory === 'chemistry' ? 'active' : ''} 
+            className={`category-tab ${selectedCategory === 'chemistry' ? 'active' : ''}`} 
             onClick={() => handleCategoryChange('chemistry')}
           >
+            <span className="tab-icon chemistry-icon">⚗️</span>
             Chemistry
           </button>
           <button 
-            className={selectedCategory === 'physics' ? 'active' : ''} 
+            className={`category-tab ${selectedCategory === 'physics' ? 'active' : ''}`} 
             onClick={() => handleCategoryChange('physics')}
           >
+            <span className="tab-icon physics-icon">🔭</span>
             Physics
           </button>
           <button 
-            className={selectedCategory === 'manual' ? 'active' : ''} 
+            className={`category-tab ${selectedCategory === 'manual' ? 'active' : ''}`} 
             onClick={() => handleCategoryChange('manual')}
           >
-            Manual Download
+            <span className="tab-icon manual-icon">📘</span>
+            Manuals
           </button>
         </div>
-        
-        <div className={`simulation-list ${isAnimating ? 'animating' : ''}`}>
-          {filteredSimulations.length > 0 ? (
+
+        <div className="simulation-grid">
+          {filteredSimulations && filteredSimulations.length > 0 ? (
             filteredSimulations.map((sim, index) => (
-              <div className="simulation-item" key={index}>
-                <div className="simulation-number">{index + 1}</div>
-                <div className="simulation-content">
-                  <h3 className="simulation-title">{sim.name}</h3>
-                  <p className="simulation-description">{sim.description}</p>
-                  
-                  <div className="action-row">
-                    <button 
-                      className="explore-btn" 
-                      onClick={() => handleDownload(sim.pdf)} 
-                    >
-                      {selectedCategory === 'manual' ? 'Download' : 'Explore'}
-                      <ArrowIcon />
-                    </button>
+              <div className="simulation-card" key={index}>
+                <div className="card-content">
+                  <div className="card-header">
+                    <h3 className="card-title">{sim.name}</h3>
+                    <div className="card-number">{index + 1}</div>
                   </div>
+                  
+                  <p className="card-description">{sim.description}</p>
+                  
+                  {(sim.sub || sim.sub2 || sim.sub3) && (
+                    <div className="tag-container">
+                      {sim.sub && <span className="subject-tag">{sim.sub}</span>}
+                      {sim.sub2 && <span className="subject-tag">{sim.sub2}</span>}
+                      {sim.sub3 && <span className="subject-tag">{sim.sub3}</span>}
+                    </div>
+                  )}
+                  
+                  <button 
+                    className="action-button" 
+                    onClick={() => handleDownload(sim.link || sim.pdf)} // Check if it's a link or PDF
+                  >
+                    <span>{selectedCategory === 'manual' ? 'Download' : 'Explore'}</span>
+                    <ArrowIcon />
+                  </button>
                 </div>
+                <div className="card-accent"></div>
               </div>
             ))
           ) : (
@@ -134,33 +139,32 @@ export default function Syllabus() {
                 <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
                 <line x1="12" y1="17" x2="12.01" y2="17"></line>
               </svg>
-              <h3>No simulations found</h3>
-              <p>Try selecting a different category</p>
+              <h3>No resources found</h3>
+              <p>Please select a different category</p>
             </div>
           )}
         </div>
       </div>
-      
+
       <Footer />
-      <div 
+
+      {/* ChatBot toggle button */}
+      <button 
         className={`chat-button ${chatOpen ? 'active' : ''}`} 
         onClick={toggleChat}
+        aria-label={chatOpen ? "Close chat" : "Open chat"}
       >
         {chatOpen ? 
           <svg className="close-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-          </svg>
-          :
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg> :
           <svg className="chat-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+            <path d="M4 4h16v12H5.17L4 17.17V4z" />
           </svg>
         }
-      </div>
+      </button>
 
-      {/* ChatBot Sidebar */}
-      <div className={`chat-sidebar ${chatOpen ? 'open' : ''}`}>
-        <ChatBot />
-      </div>
+      {chatOpen && <ChatBot />}
     </div>
   );
 }
