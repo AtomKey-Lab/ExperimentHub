@@ -959,3 +959,947 @@ export const electrolysisQuestions = [
     ],
   },
 ];
+
+
+
+
+
+// Waves Simulation
+export const waveSimQuestions = [
+  {
+    questionText: "What determines the speed of a wave on a string?",
+    answerOptions: [
+      { answerText: "Amplitude", isCorrect: false },
+      { answerText: "Tension and mass per unit length", isCorrect: true },
+      { answerText: "Frequency only", isCorrect: false },
+      { answerText: "Wavelength only", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "What type of wave requires a medium to propagate?",
+    answerOptions: [
+      { answerText: "Electromagnetic wave", isCorrect: false },
+      { answerText: "Mechanical wave", isCorrect: true },
+      { answerText: "Light wave", isCorrect: false },
+      { answerText: "X-ray", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The highest point of a transverse wave is called:",
+    answerOptions: [
+      { answerText: "Trough", isCorrect: false },
+      { answerText: "Crest", isCorrect: true },
+      { answerText: "Node", isCorrect: false },
+      { answerText: "Antinode", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "When two waves interfere destructively, what happens?",
+    answerOptions: [
+      { answerText: "Amplitude increases", isCorrect: false },
+      { answerText: "Amplitude decreases or cancels out", isCorrect: true },
+      { answerText: "Frequency doubles", isCorrect: false },
+      { answerText: "Wavelength halves", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "What property of a wave is measured in Hertz (Hz)?",
+    answerOptions: [
+      { answerText: "Amplitude", isCorrect: false },
+      { answerText: "Wavelength", isCorrect: false },
+      { answerText: "Frequency", isCorrect: true },
+      { answerText: "Speed", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Standing waves are produced by:",
+    answerOptions: [
+      { answerText: "Two identical waves moving in opposite directions", isCorrect: true },
+      { answerText: "A single wave pulse", isCorrect: false },
+      { answerText: "Waves of different frequencies", isCorrect: false },
+      { answerText: "Non-periodic disturbances", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "In a longitudinal wave, particles vibrate:",
+    answerOptions: [
+      { answerText: "Perpendicular to wave direction", isCorrect: false },
+      { answerText: "Parallel to wave direction", isCorrect: true },
+      { answerText: "In circular paths", isCorrect: false },
+      { answerText: "Not at all", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The distance between two consecutive crests is called:",
+    answerOptions: [
+      { answerText: "Amplitude", isCorrect: false },
+      { answerText: "Frequency", isCorrect: false },
+      { answerText: "Wavelength", isCorrect: true },
+      { answerText: "Period", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Which wave property determines loudness in sound waves?",
+    answerOptions: [
+      { answerText: "Frequency", isCorrect: false },
+      { answerText: "Wavelength", isCorrect: false },
+      { answerText: "Amplitude", isCorrect: true },
+      { answerText: "Speed", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "When a wave bends around an obstacle, it's called:",
+    answerOptions: [
+      { answerText: "Reflection", isCorrect: false },
+      { answerText: "Refraction", isCorrect: false },
+      { answerText: "Diffraction", isCorrect: true },
+      { answerText: "Interference", isCorrect: false }
+    ]
+  }
+];
+
+// Mass and Springs Simulation
+export const massSpringQuestions = [
+  {
+    questionText: "What happens when mass on a spring increases?",
+    answerOptions: [
+      { answerText: "Frequency increases", isCorrect: false },
+      { answerText: "Amplitude decreases", isCorrect: false },
+      { answerText: "Oscillation slows down", isCorrect: true },
+      { answerText: "Spring breaks", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "What is the restoring force in a spring-mass system?",
+    answerOptions: [
+      { answerText: "Gravity", isCorrect: false },
+      { answerText: "Friction", isCorrect: false },
+      { answerText: "Spring force", isCorrect: true },
+      { answerText: "Normal force", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The time for one complete oscillation is called:",
+    answerOptions: [
+      { answerText: "Frequency", isCorrect: false },
+      { answerText: "Amplitude", isCorrect: false },
+      { answerText: "Period", isCorrect: true },
+      { answerText: "Wavelength", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "In simple harmonic motion, acceleration is:",
+    answerOptions: [
+      { answerText: "Constant", isCorrect: false },
+      { answerText: "Proportional to displacement", isCorrect: true },
+      { answerText: "Zero at all times", isCorrect: false },
+      { answerText: "Random", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Energy in a spring-mass system is conserved when:",
+    answerOptions: [
+      { answerText: "There is no friction", isCorrect: true },
+      { answerText: "Mass is very large", isCorrect: false },
+      { answerText: "Spring is very stiff", isCorrect: false },
+      { answerText: "Oscillations are fast", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "At maximum displacement in a spring system:",
+    answerOptions: [
+      { answerText: "Kinetic energy is maximum", isCorrect: false },
+      { answerText: "Potential energy is maximum", isCorrect: true },
+      { answerText: "Acceleration is zero", isCorrect: false },
+      { answerText: "Speed is maximum", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "What happens to the period if the spring constant increases?",
+    answerOptions: [
+      { answerText: "Period increases", isCorrect: false },
+      { answerText: "Period decreases", isCorrect: true },
+      { answerText: "Period stays the same", isCorrect: false },
+      { answerText: "Period becomes zero", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The point where the spring-mass system is at rest is called:",
+    answerOptions: [
+      { answerText: "Amplitude", isCorrect: false },
+      { answerText: "Equilibrium position", isCorrect: true },
+      { answerText: "Crest", isCorrect: false },
+      { answerText: "Node", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "If you double the mass on a spring, the period:",
+    answerOptions: [
+      { answerText: "Increases by √2", isCorrect: true },
+      { answerText: "Decreases by half", isCorrect: false },
+      { answerText: "Doubles", isCorrect: false },
+      { answerText: "Stays the same", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Damping in a spring system causes:",
+    answerOptions: [
+      { answerText: "Increase in amplitude over time", isCorrect: false },
+      { answerText: "Decrease in amplitude over time", isCorrect: true },
+      { answerText: "No change in oscillation", isCorrect: false },
+      { answerText: "Increase in frequency", isCorrect: false }
+    ]
+  }
+];
+
+// States of Matter Simulation
+export const statesMatterQuestions = [
+  {
+    questionText: "Which state of matter has a definite shape and volume?",
+    answerOptions: [
+      { answerText: "Solid", isCorrect: true },
+      { answerText: "Liquid", isCorrect: false },
+      { answerText: "Gas", isCorrect: false },
+      { answerText: "Plasma", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Which state has particles that can flow but have fixed volume?",
+    answerOptions: [
+      { answerText: "Solid", isCorrect: false },
+      { answerText: "Liquid", isCorrect: true },
+      { answerText: "Gas", isCorrect: false },
+      { answerText: "Plasma", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "What happens to particle motion when temperature increases?",
+    answerOptions: [
+      { answerText: "Slows down", isCorrect: false },
+      { answerText: "Speeds up", isCorrect: true },
+      { answerText: "Stops completely", isCorrect: false },
+      { answerText: "Becomes random", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The change from solid to liquid is called:",
+    answerOptions: [
+      { answerText: "Evaporation", isCorrect: false },
+      { answerText: "Condensation", isCorrect: false },
+      { answerText: "Melting", isCorrect: true },
+      { answerText: "Sublimation", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Which state has the highest kinetic energy?",
+    answerOptions: [
+      { answerText: "Solid", isCorrect: false },
+      { answerText: "Liquid", isCorrect: false },
+      { answerText: "Gas", isCorrect: true },
+      { answerText: "All have same energy", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Dry ice sublimates directly from:",
+    answerOptions: [
+      { answerText: "Solid to gas", isCorrect: true },
+      { answerText: "Liquid to gas", isCorrect: false },
+      { answerText: "Solid to liquid", isCorrect: false },
+      { answerText: "Gas to plasma", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Surface tension is a property of:",
+    answerOptions: [
+      { answerText: "Gases only", isCorrect: false },
+      { answerText: "Liquids only", isCorrect: true },
+      { answerText: "Solids only", isCorrect: false },
+      { answerText: "Plasmas only", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The boiling point of water at standard pressure is:",
+    answerOptions: [
+      { answerText: "0°C", isCorrect: false },
+      { answerText: "100°C", isCorrect: true },
+      { answerText: "212°C", isCorrect: false },
+      { answerText: "373K", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Which factor does NOT affect phase changes?",
+    answerOptions: [
+      { answerText: "Temperature", isCorrect: false },
+      { answerText: "Pressure", isCorrect: false },
+      { answerText: "Color of substance", isCorrect: true },
+      { answerText: "Intermolecular forces", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Viscosity measures a fluid's:",
+    answerOptions: [
+      { answerText: "Resistance to flow", isCorrect: true },
+      { answerText: "Ability to conduct electricity", isCorrect: false },
+      { answerText: "Optical clarity", isCorrect: false },
+      { answerText: "Magnetic properties", isCorrect: false }
+    ]
+  }
+];
+
+// Hooke's Law Simulation
+export const hookesLawQuestions = [
+  {
+    questionText: "Hooke's Law is represented by which equation?",
+    answerOptions: [
+      { answerText: "F = ma", isCorrect: false },
+      { answerText: "F = kx", isCorrect: true },
+      { answerText: "F = mv", isCorrect: false },
+      { answerText: "F = 1/2 kx^2", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "In Hooke's Law, 'k' represents:",
+    answerOptions: [
+      { answerText: "Displacement", isCorrect: false },
+      { answerText: "Spring constant", isCorrect: true },
+      { answerText: "Mass", isCorrect: false },
+      { answerText: "Velocity", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Hooke's Law applies within what limit?",
+    answerOptions: [
+      { answerText: "Elastic limit", isCorrect: true },
+      { answerText: "Breaking point", isCorrect: false },
+      { answerText: "Plastic deformation region", isCorrect: false },
+      { answerText: "Infinite stretch", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "What happens if you stretch a spring beyond its elastic limit?",
+    answerOptions: [
+      { answerText: "It will still obey Hooke's Law", isCorrect: false },
+      { answerText: "It will permanently deform", isCorrect: true },
+      { answerText: "It will lose all elasticity", isCorrect: false },
+      { answerText: "It will become stronger", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The area under a force vs. extension graph represents:",
+    answerOptions: [
+      { answerText: "Spring constant", isCorrect: false },
+      { answerText: "Potential energy stored", isCorrect: true },
+      { answerText: "Kinetic energy", isCorrect: false },
+      { answerText: "Power", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "If a spring is compressed instead of stretched:",
+    answerOptions: [
+      { answerText: "Hooke's Law doesn't apply", isCorrect: false },
+      { answerText: "The force direction reverses but law still applies", isCorrect: true },
+      { answerText: "The spring constant changes", isCorrect: false },
+      { answerText: "Energy is not stored", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Two identical springs in parallel have an effective spring constant:",
+    answerOptions: [
+      { answerText: "Same as single spring", isCorrect: false },
+      { answerText: "Double that of single spring", isCorrect: true },
+      { answerText: "Half that of single spring", isCorrect: false },
+      { answerText: "Four times that of single spring", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The SI unit for spring constant is:",
+    answerOptions: [
+      { answerText: "N/m", isCorrect: true },
+      { answerText: "N·m", isCorrect: false },
+      { answerText: "m/N", isCorrect: false },
+      { answerText: "J/m", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "When a spring is stretched by 2x, the stored energy:",
+    answerOptions: [
+      { answerText: "Doubles", isCorrect: false },
+      { answerText: "Quadruples", isCorrect: true },
+      { answerText: "Stays the same", isCorrect: false },
+      { answerText: "Halves", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Hooke's Law is analogous to which electrical concept?",
+    answerOptions: [
+      { answerText: "Ohm's Law", isCorrect: true },
+      { answerText: "Faraday's Law", isCorrect: false },
+      { answerText: "Coulomb's Law", isCorrect: false },
+      { answerText: "Ampere's Law", isCorrect: false }
+    ]
+  }
+];
+
+// Balancing Act Simulation
+export const balancingActQuestions = [
+  {
+    questionText: "What is needed for balance on a seesaw?",
+    answerOptions: [
+      { answerText: "Equal weights at any distance", isCorrect: false },
+      { answerText: "Equal torques on both sides", isCorrect: true },
+      { answerText: "Equal mass only", isCorrect: false },
+      { answerText: "Shorter lever arm", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Torque depends on:",
+    answerOptions: [
+      { answerText: "Force only", isCorrect: false },
+      { answerText: "Distance only", isCorrect: false },
+      { answerText: "Force and distance", isCorrect: true },
+      { answerText: "Mass and acceleration", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The pivot point of a lever is called:",
+    answerOptions: [
+      { answerText: "Center of mass", isCorrect: false },
+      { answerText: "Fulcrum", isCorrect: true },
+      { answerText: "Torque point", isCorrect: false },
+      { answerText: "Balance node", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "If you double the distance from the pivot, torque:",
+    answerOptions: [
+      { answerText: "Doubles", isCorrect: true },
+      { answerText: "Halves", isCorrect: false },
+      { answerText: "Quadruples", isCorrect: false },
+      { answerText: "Stays the same", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Center of mass is the point where:",
+    answerOptions: [
+      { answerText: "All mass is concentrated", isCorrect: false },
+      { answerText: "Weight appears to act", isCorrect: true },
+      { answerText: "No torque exists", isCorrect: false },
+      { answerText: "Acceleration is zero", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "A first-class lever has:",
+    answerOptions: [
+      { answerText: "Fulcrum between load and effort", isCorrect: true },
+      { answerText: "Load between fulcrum and effort", isCorrect: false },
+      { answerText: "Effort between fulcrum and load", isCorrect: false },
+      { answerText: "No fulcrum", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "For an object to be in rotational equilibrium:",
+    answerOptions: [
+      { answerText: "Net torque must be zero", isCorrect: true },
+      { answerText: "Net force must be zero", isCorrect: false },
+      { answerText: "Both net force and torque must be zero", isCorrect: false },
+      { answerText: "Angular velocity must be constant", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "A longer lever arm provides:",
+    answerOptions: [
+      { answerText: "Less mechanical advantage", isCorrect: false },
+      { answerText: "More mechanical advantage", isCorrect: true },
+      { answerText: "No change in advantage", isCorrect: false },
+      { answerText: "More friction", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "When adding weight to one side of a balanced system:",
+    answerOptions: [
+      { answerText: "Add equal weight to same side to rebalance", isCorrect: false },
+      { answerText: "Add less weight to opposite side at greater distance", isCorrect: true },
+      { answerText: "Remove all weights", isCorrect: false },
+      { answerText: "It cannot be rebalanced", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The unit of torque is:",
+    answerOptions: [
+      { answerText: "Newton", isCorrect: false },
+      { answerText: "Joule", isCorrect: false },
+      { answerText: "Newton-meter", isCorrect: true },
+      { answerText: "Watt", isCorrect: false }
+    ]
+  }
+];
+
+// Force Simulation
+export const forceQuestions = [
+  {
+    questionText: "Which of the following is a contact force?",
+    answerOptions: [
+      { answerText: "Gravitational force", isCorrect: false },
+      { answerText: "Friction", isCorrect: true },
+      { answerText: "Magnetic force", isCorrect: false },
+      { answerText: "Electric force", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Newton's First Law is also called:",
+    answerOptions: [
+      { answerText: "Law of Acceleration", isCorrect: false },
+      { answerText: "Law of Action-Reaction", isCorrect: false },
+      { answerText: "Law of Inertia", isCorrect: true },
+      { answerText: "Law of Momentum", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The acceleration of an object is:",
+    answerOptions: [
+      { answerText: "Directly proportional to net force", isCorrect: true },
+      { answerText: "Inversely proportional to mass", isCorrect: false },
+      { answerText: "Independent of force", isCorrect: false },
+      { answerText: "Always constant", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Action and reaction forces:",
+    answerOptions: [
+      { answerText: "Cancel each other out", isCorrect: false },
+      { answerText: "Act on different objects", isCorrect: true },
+      { answerText: "Are always equal in magnitude", isCorrect: false },
+      { answerText: "Never exist simultaneously", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The force of gravity on an object is called:",
+    answerOptions: [
+      { answerText: "Mass", isCorrect: false },
+      { answerText: "Weight", isCorrect: true },
+      { answerText: "Normal force", isCorrect: false },
+      { answerText: "Tension", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Static friction is generally:",
+    answerOptions: [
+      { answerText: "Less than kinetic friction", isCorrect: false },
+      { answerText: "Greater than kinetic friction", isCorrect: true },
+      { answerText: "Equal to kinetic friction", isCorrect: false },
+      { answerText: "Zero", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "In free-body diagrams, forces are represented as:",
+    answerOptions: [
+      { answerText: "Points", isCorrect: false },
+      { answerText: "Arrows", isCorrect: true },
+      { answerText: "Circles", isCorrect: false },
+      { answerText: "Lines without direction", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The normal force is always:",
+    answerOptions: [
+      { answerText: "Equal to weight", isCorrect: false },
+      { answerText: "Perpendicular to the contact surface", isCorrect: true },
+      { answerText: "Parallel to motion", isCorrect: false },
+      { answerText: "Zero in space", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Terminal velocity occurs when:",
+    answerOptions: [
+      { answerText: "Gravity disappears", isCorrect: false },
+      { answerText: "Air resistance equals weight", isCorrect: true },
+      { answerText: "Acceleration stops", isCorrect: false },
+      { answerText: "All forces cancel out", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The SI unit of force is:",
+    answerOptions: [
+      { answerText: "Joule", isCorrect: false },
+      { answerText: "Watt", isCorrect: false },
+      { answerText: "Newton", isCorrect: true },
+      { answerText: "Pascal", isCorrect: false }
+    ]
+  }
+];
+
+// Sound Waves Simulation
+export const soundWavesQuestions = [
+  {
+    questionText: "What kind of wave is sound?",
+    answerOptions: [
+      { answerText: "Transverse", isCorrect: false },
+      { answerText: "Longitudinal", isCorrect: true },
+      { answerText: "Electromagnetic", isCorrect: false },
+      { answerText: "None", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Sound cannot travel through:",
+    answerOptions: [
+      { answerText: "Solids", isCorrect: false },
+      { answerText: "Liquids", isCorrect: false },
+      { answerText: "Gases", isCorrect: false },
+      { answerText: "Vacuum", isCorrect: true }
+    ]
+  },
+  {
+    questionText: "Pitch is determined by sound wave's:",
+    answerOptions: [
+      { answerText: "Amplitude", isCorrect: false },
+      { answerText: "Frequency", isCorrect: true },
+      { answerText: "Wavelength", isCorrect: false },
+      { answerText: "Speed", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The speed of sound is fastest in:",
+    answerOptions: [
+      { answerText: "Air", isCorrect: false },
+      { answerText: "Water", isCorrect: false },
+      { answerText: "Steel", isCorrect: true },
+      { answerText: "Vacuum", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The Doppler effect causes change in:",
+    answerOptions: [
+      { answerText: "Amplitude", isCorrect: false },
+      { answerText: "Perceived frequency", isCorrect: true },
+      { answerText: "Wave speed", isCorrect: false },
+      { answerText: "Medium", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Ultrasound refers to sound waves with:",
+    answerOptions: [
+      { answerText: "High amplitude", isCorrect: false },
+      { answerText: "Frequency above human hearing", isCorrect: true },
+      { answerText: "Low frequency", isCorrect: false },
+      { answerText: "Long wavelength", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Loudness is related to wave's:",
+    answerOptions: [
+      { answerText: "Frequency", isCorrect: false },
+      { answerText: "Amplitude", isCorrect: true },
+      { answerText: "Wavelength", isCorrect: false },
+      { answerText: "Speed", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "An echo is an example of:",
+    answerOptions: [
+      { answerText: "Reflection", isCorrect: true },
+      { answerText: "Refraction", isCorrect: false },
+      { answerText: "Diffraction", isCorrect: false },
+      { answerText: "Interference", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Sound intensity is measured in:",
+    answerOptions: [
+      { answerText: "Hertz", isCorrect: false },
+      { answerText: "Decibels", isCorrect: true },
+      { answerText: "Newtons", isCorrect: false },
+      { answerText: "Watts", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Constructive interference of sound waves creates:",
+    answerOptions: [
+      { answerText: "Louder sound", isCorrect: true },
+      { answerText: "Softer sound", isCorrect: false },
+      { answerText: "Higher pitch", isCorrect: false },
+      { answerText: "Lower pitch", isCorrect: false }
+    ]
+  }
+];
+
+// Glass Slab Simulation
+export const glassSlabQuestions = [
+  {
+    questionText: "What happens to light in a glass slab?",
+    answerOptions: [
+      { answerText: "It disappears", isCorrect: false },
+      { answerText: "It bends and emerges parallel", isCorrect: true },
+      { answerText: "It reflects back fully", isCorrect: false },
+      { answerText: "It becomes UV light", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The bending of light when passing through materials is called:",
+    answerOptions: [
+      { answerText: "Reflection", isCorrect: false },
+      { answerText: "Refraction", isCorrect: true },
+      { answerText: "Diffraction", isCorrect: false },
+      { answerText: "Dispersion", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Snell's Law relates:",
+    answerOptions: [
+      { answerText: "Angle of incidence and angle of reflection", isCorrect: false },
+      { answerText: "Angle of incidence and angle of refraction", isCorrect: true },
+      { answerText: "Wavelength and frequency", isCorrect: false },
+      { answerText: "Speed and intensity", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "When light enters a denser medium, it:",
+    answerOptions: [
+      { answerText: "Speeds up", isCorrect: false },
+      { answerText: "Slows down", isCorrect: true },
+      { answerText: "Stops", isCorrect: false },
+      { answerText: "Changes color", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The index of refraction is defined as:",
+    answerOptions: [
+      { answerText: "Speed of light in vacuum/speed in medium", isCorrect: true },
+      { answerText: "Speed in medium/speed in vacuum", isCorrect: false },
+      { answerText: "Wavelength in vacuum/wavelength in medium", isCorrect: false },
+      { answerText: "Frequency in medium/frequency in vacuum", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Total internal reflection occurs when light travels from:",
+    answerOptions: [
+      { answerText: "Air to water", isCorrect: false },
+      { answerText: "Water to air at small angles", isCorrect: false },
+      { answerText: "Water to air beyond critical angle", isCorrect: true },
+      { answerText: "Glass to diamond", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Dispersion in a prism occurs because:",
+    answerOptions: [
+      { answerText: "Different colors have different speeds in material", isCorrect: true },
+      { answerText: "Light intensity changes", isCorrect: false },
+      { answerText: "The prism absorbs some colors", isCorrect: false },
+      { answerText: "Light becomes polarized", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The critical angle is the angle of incidence that results in:",
+    answerOptions: [
+      { answerText: "Complete reflection", isCorrect: false },
+      { answerText: "Complete transmission", isCorrect: false },
+      { answerText: "90° angle of refraction", isCorrect: true },
+      { answerText: "Maximum dispersion", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Optical fibers work based on:",
+    answerOptions: [
+      { answerText: "Diffraction", isCorrect: false },
+      { answerText: "Total internal reflection", isCorrect: true },
+      { answerText: "Dispersion", isCorrect: false },
+      { answerText: "Polarization", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "When white light passes through a glass slab:",
+    answerOptions: [
+      { answerText: "It emerges as a spectrum", isCorrect: false },
+      { answerText: "It emerges as white light", isCorrect: true },
+      { answerText: "It becomes infrared", isCorrect: false },
+      { answerText: "It becomes ultraviolet", isCorrect: false }
+    ]
+  }
+];
+
+// Resistance in Series and Parallel
+export const resistanceSeriesParallelQuestions = [
+  {
+    questionText: "What happens to total resistance in series?",
+    answerOptions: [
+      { answerText: "It decreases", isCorrect: false },
+      { answerText: "It increases", isCorrect: true },
+      { answerText: "Stays the same", isCorrect: false },
+      { answerText: "Becomes zero", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "In parallel circuits, total resistance is:",
+    answerOptions: [
+      { answerText: "Greater than any individual resistor", isCorrect: false },
+      { answerText: "Less than any individual resistor", isCorrect: true },
+      { answerText: "Equal to the average resistance", isCorrect: false },
+      { answerText: "Always zero", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Three 10Ω resistors in series have total resistance:",
+    answerOptions: [
+      { answerText: "10Ω", isCorrect: false },
+      { answerText: "30Ω", isCorrect: true },
+      { answerText: "3.33Ω", isCorrect: false },
+      { answerText: "0Ω", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Three 10Ω resistors in parallel have total resistance:",
+    answerOptions: [
+      { answerText: "10Ω", isCorrect: false },
+      { answerText: "30Ω", isCorrect: false },
+      { answerText: "3.33Ω", isCorrect: true },
+      { answerText: "0Ω", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Current in a series circuit is:",
+    answerOptions: [
+      { answerText: "Different in each component", isCorrect: false },
+      { answerText: "Same throughout", isCorrect: true },
+      { answerText: "Zero in some components", isCorrect: false },
+      { answerText: "Infinite", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Voltage across parallel components is:",
+    answerOptions: [
+      { answerText: "Different across each", isCorrect: false },
+      { answerText: "Same across all", isCorrect: true },
+      { answerText: "Zero", isCorrect: false },
+      { answerText: "Infinite", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Adding more resistors in parallel:",
+    answerOptions: [
+      { answerText: "Increases total resistance", isCorrect: false },
+      { answerText: "Decreases total resistance", isCorrect: true },
+      { answerText: "Doesn't affect resistance", isCorrect: false },
+      { answerText: "Makes resistance zero", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The formula for parallel resistance is:",
+    answerOptions: [
+      { answerText: "1/Rt = 1/R1 + 1/R2 + ...", isCorrect: true },
+      { answerText: "Rt = R1 + R2 + ...", isCorrect: false },
+      { answerText: "Rt = R1 × R2 × ...", isCorrect: false },
+      { answerText: "Rt = (R1 + R2)/2", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Household wiring uses:",
+    answerOptions: [
+      { answerText: "Series circuits", isCorrect: false },
+      { answerText: "Parallel circuits", isCorrect: true },
+      { answerText: "Combination circuits", isCorrect: false },
+      { answerText: "No circuits", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "If one bulb burns out in a parallel circuit:",
+    answerOptions: [
+      { answerText: "All bulbs go out", isCorrect: false },
+      { answerText: "Only that bulb goes out", isCorrect: true },
+      { answerText: "The circuit breaks", isCorrect: false },
+      { answerText: "Current increases", isCorrect: false }
+    ]
+  }
+];
+
+// Convex Lens & Concave Mirror Simulation
+export const lensMirrorQuestions = [
+  {
+    questionText: "A convex lens focuses light to a point. What is this point called?",
+    answerOptions: [
+      { answerText: "Vertex", isCorrect: false },
+      { answerText: "Focus", isCorrect: true },
+      { answerText: "Pole", isCorrect: false },
+      { answerText: "Center", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "A concave mirror can produce:",
+    answerOptions: [
+      { answerText: "Only virtual images", isCorrect: false },
+      { answerText: "Only real images", isCorrect: false },
+      { answerText: "Both real and virtual images", isCorrect: true },
+      { answerText: "No images", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "The focal length is the distance from:",
+    answerOptions: [
+      { answerText: "Object to image", isCorrect: false },
+      { answerText: "Lens to mirror", isCorrect: false },
+      { answerText: "Pole to focus", isCorrect: true },
+      { answerText: "Focus to object", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Which lens converges light rays?",
+    answerOptions: [
+      { answerText: "Concave lens", isCorrect: false },
+      { answerText: "Convex lens", isCorrect: true },
+      { answerText: "Plane mirror", isCorrect: false },
+      { answerText: "None of the above", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Which mirror is used in a shaving mirror?",
+    answerOptions: [
+      { answerText: "Convex mirror", isCorrect: false },
+      { answerText: "Concave mirror", isCorrect: true },
+      { answerText: "Plane mirror", isCorrect: false },
+      { answerText: "None", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "An image formed by a convex lens is real, inverted, and smaller when:",
+    answerOptions: [
+      { answerText: "The object is between lens and focus", isCorrect: false },
+      { answerText: "The object is at infinity", isCorrect: true },
+      { answerText: "The object is at focus", isCorrect: false },
+      { answerText: "The object is between focus and center", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Which of the following always forms a virtual image?",
+    answerOptions: [
+      { answerText: "Convex mirror", isCorrect: true },
+      { answerText: "Concave mirror", isCorrect: false },
+      { answerText: "Convex lens", isCorrect: false },
+      { answerText: "Plane mirror", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "When the object is at 2F in a convex lens, the image is formed at:",
+    answerOptions: [
+      { answerText: "Focus", isCorrect: false },
+      { answerText: "2F on the other side", isCorrect: true },
+      { answerText: "Infinity", isCorrect: false },
+      { answerText: "Between focus and pole", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "A real image is always:",
+    answerOptions: [
+      { answerText: "Upright", isCorrect: false },
+      { answerText: "Virtual", isCorrect: false },
+      { answerText: "Inverted", isCorrect: true },
+      { answerText: "None of the above", isCorrect: false }
+    ]
+  },
+  {
+    questionText: "Which mirror is used in rearview mirrors of vehicles?",
+    answerOptions: [
+      { answerText: "Convex mirror", isCorrect: true },
+      { answerText: "Concave mirror", isCorrect: false },
+      { answerText: "Plane mirror", isCorrect: false },
+      { answerText: "Cylindrical mirror", isCorrect: false }
+    ]
+  }
+];

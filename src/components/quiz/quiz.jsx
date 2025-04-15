@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './quiz.css';
 
-// Import your questions
+// Import your questions from the config file
 import {
   gravitationalQuestions,
   chemistryQuestions,
@@ -14,7 +14,17 @@ import {
   energyChangeFormsQuestions,
   concentrationQuestions,
   phQuestions,
-  electrolysisQuestions
+  electrolysisQuestions,
+  lensMirrorQuestions,
+  resistanceSeriesParallelQuestions,
+  glassSlabQuestions,
+  soundWavesQuestions,
+  forceQuestions,
+  balancingActQuestions,
+  hookesLawQuestions,
+  statesMatterQuestions,
+  massSpringQuestions,
+  waveSimQuestions
 } from "../../config/quizData";
 
 // Map paths to question sets
@@ -22,7 +32,7 @@ const quizMap = {
   gravitation: gravitationalQuestions,
   chemistry: chemistryQuestions,
   acidbase: acidBaseQuestions,
-  balloonelectricity: balloonStaticElectricityQuestions,
+  balloanelectricity: balloonStaticElectricityQuestions,
   molarity: molarityQuestions,
   wavestring: waveStringQuestions,
   density: densityQuestions,
@@ -30,6 +40,18 @@ const quizMap = {
   concentration: concentrationQuestions,
   ph: phQuestions,
   electrolysis: electrolysisQuestions,
+  
+  // New simulation question sets
+  convexconcave: lensMirrorQuestions,
+  resistance: resistanceSeriesParallelQuestions,
+  glassslab: glassSlabQuestions,
+  soundWaves: soundWavesQuestions,
+  force: forceQuestions,
+  balancing: balancingActQuestions,
+  hookslaw: hookesLawQuestions,
+  statematter: statesMatterQuestions,
+  springs: massSpringQuestions,
+  wave: waveSimQuestions
 };
 
 const Quiz = () => {
