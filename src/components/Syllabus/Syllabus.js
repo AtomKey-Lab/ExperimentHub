@@ -25,19 +25,19 @@ export default function Syllabus() {
     { 
       name: 'CBSC Manual', 
       description: 'Comprehensive guide for CBSC Board curriculum with detailed explanations and practice materials', 
-      pdf: `${process.env.PUBLIC_URL}/pdf/CBSC Board Manual.pdf`,
+      pdf: '/pdf/CBSC Board Manual.pdf',
       sub: 'PDF' 
     },
     { 
       name: 'ICSE Manual', 
       description: 'Complete reference manual for ICSE Board students with curriculum highlights and examples', 
-      pdf: `${process.env.PUBLIC_URL}/pdf/ICSE Board Manual.pdf`,
+      pdf: '/pdf/ICSE Board Manual.pdf',
       sub: 'PDF' 
     },
     { 
       name: 'Maharashtra Manual', 
       description: 'Official curriculum guide for Maharashtra Board with chapter-wise resources and guidelines', 
-      pdf: `${process.env.PUBLIC_URL}/pdf/Maharashtra Board Manual.pdf`,
+      pdf: '/pdf/Maharashtra Board Manual.pdf',
       sub: 'PDF'
     },
   ];
@@ -57,19 +57,14 @@ export default function Syllabus() {
   };
 
   const handleDownload = (link) => {
-    if (selectedCategory === 'manual') {
-      // For production, ensure the link is absolute
-      const absoluteLink = link.startsWith('http') ? link : window.location.origin + link;
-      const linkElement = document.createElement('a');
-      linkElement.href = absoluteLink;
-      linkElement.download = link.split('/').pop();
-      linkElement.target = '_blank'; // Open in new tab as fallback
-      document.body.appendChild(linkElement);
-      linkElement.click();
-      document.body.removeChild(linkElement);
-    } else {
-      window.open(link, '_blank');
-    }
+    const absoluteLink = link.startsWith('http') ? link : `${process.env.PUBLIC_URL}${link}`;
+    const linkElement = document.createElement('a');
+    linkElement.href = absoluteLink;
+    linkElement.download = link.split('/').pop();
+    linkElement.target = '_blank'; // Open in new tab as fallback
+    document.body.appendChild(linkElement);
+    linkElement.click();
+    document.body.removeChild(linkElement);
   };
 
   return (
@@ -124,7 +119,7 @@ export default function Syllabus() {
                   
                   <button 
                     className="action-button" 
-                    onClick={() => handleDownload(sim.link || sim.pdf)}
+                    onClick={() => handleDownload(sim.pdf)}
                   >
                     <span>{selectedCategory === 'manual' ? 'Download' : 'Explore'}</span>
                     <ArrowIcon />
