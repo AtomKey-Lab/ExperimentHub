@@ -58,15 +58,16 @@ export default function Syllabus() {
 
   const handleDownload = (link) => {
     if (selectedCategory === 'manual') {
-      // Download behavior for Manuals (PDF files)
+      // For production, ensure the link is absolute
+      const absoluteLink = link.startsWith('http') ? link : window.location.origin + link;
       const linkElement = document.createElement('a');
-      linkElement.href = link;
-      linkElement.download = link.split('/').pop(); // Extracts file name for download
+      linkElement.href = absoluteLink;
+      linkElement.download = link.split('/').pop();
+      linkElement.target = '_blank'; // Open in new tab as fallback
       document.body.appendChild(linkElement);
       linkElement.click();
       document.body.removeChild(linkElement);
     } else {
-      // Explore behavior for other categories (opens in new tab)
       window.open(link, '_blank');
     }
   };
@@ -123,7 +124,7 @@ export default function Syllabus() {
                   
                   <button 
                     className="action-button" 
-                    onClick={() => handleDownload(sim.link || sim.pdf)} // Check if it's a link or PDF
+                    onClick={() => handleDownload(sim.link || sim.pdf)}
                   >
                     <span>{selectedCategory === 'manual' ? 'Download' : 'Explore'}</span>
                     <ArrowIcon />
