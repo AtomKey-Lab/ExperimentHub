@@ -25,19 +25,19 @@ export default function Syllabus() {
     { 
       name: 'CBSC Manual', 
       description: 'Comprehensive guide for CBSC Board curriculum with detailed explanations and practice materials', 
-      pdf: '/pdf/CBSC Board Manual.pdf',
+      pdf: `${process.env.PUBLIC_URL}/pdf/CBSC Board Manual.pdf`,
       sub: 'PDF' 
     },
     { 
       name: 'ICSE Manual', 
       description: 'Complete reference manual for ICSE Board students with curriculum highlights and examples', 
-      pdf: '/pdf/ICSE Board Manual.pdf',
+      pdf: `${process.env.PUBLIC_URL}/pdf/ICSE Board Manual.pdf`,
       sub: 'PDF' 
     },
     { 
       name: 'Maharashtra Manual', 
       description: 'Official curriculum guide for Maharashtra Board with chapter-wise resources and guidelines', 
-      pdf: '/pdf/Maharashtra Board Manual.pdf',
+      pdf: `${process.env.PUBLIC_URL}/pdf/Maharashtra Board Manual.pdf`,
       sub: 'PDF'
     },
   ];
@@ -57,14 +57,18 @@ export default function Syllabus() {
   };
 
   const handleDownload = (link) => {
-    const absoluteLink = link.startsWith('http') ? link : `${process.env.PUBLIC_URL}${link}`;
-    const linkElement = document.createElement('a');
-    linkElement.href = absoluteLink;
-    linkElement.download = link.split('/').pop();
-    linkElement.target = '_blank'; // Open in new tab as fallback
-    document.body.appendChild(linkElement);
-    linkElement.click();
-    document.body.removeChild(linkElement);
+    if (selectedCategory === 'manual') {
+      // Download behavior for Manuals (PDF files)
+      const linkElement = document.createElement('a');
+      linkElement.href = link;
+      linkElement.download = link.split('/').pop(); // Extracts file name for download
+      document.body.appendChild(linkElement);
+      linkElement.click();
+      document.body.removeChild(linkElement);
+    } else {
+      // Explore behavior for other categories (opens in new tab)
+      window.open(link, '_blank');
+    }
   };
 
   return (
@@ -119,7 +123,7 @@ export default function Syllabus() {
                   
                   <button 
                     className="action-button" 
-                    onClick={() => handleDownload(sim.pdf)}
+                    onClick={() => handleDownload(sim.link || sim.pdf)} // Check if it's a link or PDF
                   >
                     <span>{selectedCategory === 'manual' ? 'Download' : 'Explore'}</span>
                     <ArrowIcon />
