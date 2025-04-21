@@ -1,6 +1,5 @@
-/* Center the main container */
+/* Base styles from your original CSS */
 .cart-container {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,71 +8,406 @@
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 30px;
-}
-
-.welcome-text {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Add a subtle gradient background to the page */
+  body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%);
+  }
+  
+  .welcome-text {
     font-size: 3em;
     font-weight: bold;
     color: #2a3d66;
     margin-bottom: 10px;
-}
-
-.quote-about{
+    animation: fadeInDown 1.2s ease-out;
+    position: relative;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Underline animation for welcome text */
+  .welcome-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2a3d66, #6f9ceb);
+    animation: expandWidth 1.5s ease-out forwards;
+    animation-delay: 0.8s;
+  }
+  
+  .quote-about {
     font-size: 1.6em;
     color: #4a4a4a;
     margin: 10px 0 20px;
     font-style: italic;
     text-align: justify;
     width: 80vh;
-}
-
-
-.lab-image-head {
+    animation: fadeInUp 1.2s ease-out;
+    animation-delay: 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  
+  .lab-image-head {
     width: 100%;
     max-width: 700px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-}
-
-.lab-image {
-    width: 50vh;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Center the cart items section */
-.cart-items {
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    animation: zoomIn 1.5s ease-out;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    filter: brightness(1.03);
+  }
+  
+  .lab-image-head:hover {
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(42, 61, 102, 0.25);
+  }
+  
+  /* Enhanced cart items section with a subtle floating effect */
+  .cart-items {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    justify-content: space-between; /* Evenly space items */
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
-    margin: 40px auto 0;
-    gap: 50px; /* Increased space between items */
-}
-
-.cart-item {
+    margin: 40px auto 60px;
+    gap: 40px;
+    perspective: 1000px;
+  }
+  
+  /* Stylish card design with 3D hover effect */
+  .cart-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(25.33% - 40px); /* 3 items per row, reduce width to fit 3 */
+    width: calc(30% - 40px);
     text-align: center;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .cart-items {
-        flex-direction: column;
-        gap: 30px; /* Smaller gap for small screens */
-    }
-
+    padding: 25px 15px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    min-height: 320px;
+  }
+  
+  /* Enhanced hover effect for cart items */
+  .cart-item:hover {
+    transform: translateY(-15px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(42, 61, 102, 0.2);
+  }
+  
+  /* Staggered animation delays for cart items */
+  .cart-item:nth-child(1) { animation-delay: 0.2s; }
+  .cart-item:nth-child(2) { animation-delay: 0.4s; }
+  .cart-item:nth-child(3) { animation-delay: 0.6s; }
+  .cart-item:nth-child(4) { animation-delay: 0.8s; }
+  .cart-item:nth-child(5) { animation-delay: 1.0s; }
+  .cart-item:nth-child(6) { animation-delay: 1.2s; }
+  
+  /* IMPROVED IMAGE SIZING - larger and more consistent */
+  .lab-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    margin-bottom: 15px;
+    display: block;
+  }
+  
+  .lab-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Enhanced heading styles with animated underline */
+  .cart-item-h3 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #2a3d66;
+    transition: color 0.3s ease;
+    font-size: 1.3em;
+  }
+  
+  .cart-item-h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2a3d66, #6f9ceb);
+    transition: width 0.5s ease;
+  }
+  
+  .cart-item:hover .cart-item-h3::after {
+    width: 70%;
+  }
+  
+  /* Style for cart items 5 and 6 with decorative elements */
+  .cart-item:nth-child(5), .cart-item:nth-child(6) {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Create decorative icons for items 5 and 6 */
+  .cart-item:nth-child(5)::before {
+   
+    font-size: 5em;
+    opacity: 0.8;
+    margin-bottom: 15px;
+    animation: float 3s infinite alternate ease-in-out;
+    display: block;
+  }
+  
+  .cart-item:nth-child(6)::before {
+   
+    font-size: 5em;
+    opacity: 0.8;
+    margin-bottom: 15px;
+    animation: float 3s infinite alternate ease-in-out;
+    display: block;
+    animation-delay: 0.5s;
+  }
+  
+  /* ANIMATION FOR DESCRIPTIONS - Applied to all cart items */
+  .cart-item-desc {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    padding: 10px 5px;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    margin-top: 5px;
+    
+    text-align: center;
+  margin: 0 auto; /* This helps center the text block if it has a fixed width */
+  max-width: 80%;
+  }
+  
+  .cart-item:hover .cart-item-desc {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Special handling for items 5 and 6 that have ::after content */
+  .cart-item:nth-child(5)::after {
+   
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    padding: 10px 5px;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .cart-item:nth-child(6)::after {
+    
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    padding: 10px 5px;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .cart-item:nth-child(5):hover::after,
+  .cart-item:nth-child(6):hover::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Add accent glow effects for cart items 5 and 6 */
+  .cart-item:nth-child(5) {
+    background: linear-gradient(145deg, #f8f9fa, #ffffff);
+    border-left: 4px solid #4CAF50;
+  }
+  
+  .cart-item:nth-child(6) {
+    background: linear-gradient(145deg, #f8f9fa, #ffffff);
+    border-left: 4px solid #2196F3;
+  }
+  
+  /* Add subtle accents to all cart items */
+  .cart-item:nth-child(1) {
+    border-left: 4px solid #FF5722;
+  }
+  
+  .cart-item:nth-child(2) {
+    border-left: 4px solid #9C27B0;
+  }
+  
+  .cart-item:nth-child(3) {
+    border-left: 4px solid #FFC107;
+  }
+  
+  .cart-item:nth-child(4) {
+    border-left: 4px solid #3F51B5;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 1024px) {
     .cart-item {
-        width: 90%; /* Full width for small screens */
+      width: calc(45% - 30px);
     }
-}
+  }
+  
+  @media (max-width: 768px) {
+    .cart-items {
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .cart-item {
+      width: 90%;
+      min-height: auto;
+    }
+    
+    .quote-about {
+      width: 90%;
+    }
+    
+    .welcome-text {
+      font-size: 2.5em;
+      text-align: center;
+    }
+    
+    /* Ensure images remain visible on mobile */
+    .lab-image {
+      height: 180px;
+    }
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes expandWidth {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Custom animated background effect for the overall page */
+  .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.4;
+    background: linear-gradient(125deg, #ffffff, #f0f4f8);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Add a subtle pulse effect to attract attention */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 4px 15px rgba(106, 130, 251, 0.1);
+    }
+    50% {
+      box-shadow: 0 4px 25px rgba(106, 130, 251, 0.2);
+    }
+    100% {
+      box-shadow: 0 4px 15px rgba(106, 130, 251, 0.1);
+    }
+  }
+  
+  /* Add this class to the overall container to enable the background animation */
+  .page-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Add style for a clear call-to-action if needed */
+  .cta-button {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #2a3d66, #6f9ceb);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(42, 61, 102, 0.2);
+    animation: pulse 2s infinite;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 20px rgba(42, 61, 102, 0.3);
+  }
