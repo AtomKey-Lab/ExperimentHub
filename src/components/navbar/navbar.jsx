@@ -11,20 +11,34 @@ const Header = ({ menuActive }) => {
   const [userName, setUserName] = useState("");
 
   useEffect(() => {
-    const userEmail = localStorage.getItem('userEmail');
-    const storedUserName = localStorage.getItem('userName');
+    const checkLoginStatus = () => {
+      const userEmail = localStorage.getItem('userEmail');
+      const storedUserName = localStorage.getItem('userName');
 
-    if (userEmail) {
-      setIsLoggedIn(true);
-      setUserName(storedUserName || "User");
-    } else {
-      setIsLoggedIn(false);
-    }
+      if (userEmail) {
+        setIsLoggedIn(true);
+        setUserName(storedUserName || "User");
+      } else {
+        setIsLoggedIn(false);
+        setUserName("");
+      }
+    };
+
+    checkLoginStatus(); // Run on mount
+
+    // Listen for custom login event
+    window.addEventListener("loginStatusChanged", checkLoginStatus);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("loginStatusChanged", checkLoginStatus);
+    };
   }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('userEmail');
     localStorage.removeItem('userName');
+    localStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
     navigate("/login");
   };
@@ -67,7 +81,7 @@ const Header = ({ menuActive }) => {
                 aria-label="Profile"
                 style={{ textDecoration: 'none' }}
               >
-                Profile 
+                {userName ? `Hi, ${userName}` : 'Profile'}
               </NavLink>
 
               <button onClick={handleLogout} className="logout-button">Log Out</button>
