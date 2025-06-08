@@ -24,7 +24,7 @@ const chemistrySimulations = [
     name: 'Molarity Simulation', 
     description: 'Learn about molarity and concentration.',
     sub2: 'Maharashtra Board', 
-    link: 'https://phet.colorado.edu/sims/html/acid-base-solutions/latest/acid-base-solutions_all.html' 
+    link: 'https://phet.colorado.edu/sims/html/molarity/latest/molarity_en.html' 
   },
   { 
     name: 'Concentration', 
@@ -47,7 +47,7 @@ const chemistrySimulations = [
     description: 'Experiment with densities of objects and liquids.', 
     sub: 'CBSE Board',
     sub2: 'Maharashtra Board',  
-    link: '/https://phet.colorado.edu/sims/html/density/latest/density_all.html' 
+    link: 'https://phet.colorado.edu/sims/html/density/latest/density_all.html' 
   },
   { 
     name: 'Wave On String Simulations', 
@@ -62,13 +62,13 @@ const chemistrySimulations = [
     sub: 'CBSE Board',
     sub2: 'Maharashtra Board',  
     sub3: 'ICSE Board',
-    link: '/simulations/ph' 
+    link: 'https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale_all.html' 
   },
   { 
     name: 'Electrolysis Simulation', 
     description: 'Understand the process of electrolysis and ion movement.',
     sub3: 'ICSE Board', 
-    link: '/simulations/electrolysis' 
+    link: 'https://phet.colorado.edu/sims/cheerpj/sugar-and-salt-solutions/latest/sugar-and-salt-solutions.html?simulation=sugar-and-salt-solutions' 
   }
 ];
 

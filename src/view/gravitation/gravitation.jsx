@@ -12,7 +12,7 @@ function Gravitation() {
       
       <div className="content-area">
       <Navbar2 
-        link="/GravityExperiment"
+        link="/https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_all.html"
         title="Experiment"
         />
       </div>

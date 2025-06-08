@@ -2,7 +2,7 @@ const physicsSimulations = [
   { 
     name: 'Gravitational Simulation', 
     description: 'Understand gravitational forces and interactions.',
-    link: 'https://chemistry-experiment-kappa.vercel.app/simulations/gravity' 
+    link: 'https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_all.html' 
   },
   { 
     name: 'Waves Simulations', 
@@ -25,7 +25,7 @@ const physicsSimulations = [
   { 
     name: 'Hookes Law Simulations', 
     description: 'Stretch and compress springs.',
-    link: 'https://phet.colorado.edu/sims/html/density/latest/density_all.html' 
+    link: 'https://phet.colorado.edu/sims/html/hookes-law/latest/hookes-law_all.html' 
   },
   { 
     name: 'Balancing Act', 
@@ -53,7 +53,7 @@ const physicsSimulations = [
     sub: 'CBSE Board',
     sub3: 'ICSE Board',
     sub2: 'Maharashtra Board',
-    link: 'https://chemistry-experiment-kappa.vercel.app/simulations/lens-mirror' 
+    link: 'https://phet.colorado.edu/sims/html/geometric-optics/latest/geometric-optics_all.html' 
   },
   { 
     name: 'Glass Slab', 
@@ -61,13 +61,13 @@ const physicsSimulations = [
     sub: 'CBSE Board',
     sub3: 'ICSE Board',
     sub2: 'Maharashtra Board',
-    link: 'https://chemistry-experiment-kappa.vercel.app/simulations/glass-slab' 
+    link: 'https://phet.colorado.edu/sims/html/bending-light/latest/bending-light_en.html' 
   },
   { 
     name: 'Resistance of Resistors in Series and Parallel', 
     description: 'Calculate resistance in different connections.',
     sub3: 'ICSE Board',
-    link: 'https://chemistry-experiment-kappa.vercel.app/simulations/resistors' 
+    link: 'https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/latest/circuit-construction-kit-dc-virtual-lab_en.html' 
   }
 ];
 

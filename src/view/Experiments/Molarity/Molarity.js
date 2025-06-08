@@ -11,7 +11,7 @@ function Molarity() {
 
       <div className="content-area">
         <Navbar2 
-        link="https://phet.colorado.edu/sims/html/acid-base-solutions/latest/acid-base-solutions_all.html"
+        link="https://phet.colorado.edu/sims/html/molarity/latest/molarity_en.html"
         title="Experiment "
         />
         
