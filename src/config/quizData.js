@@ -20,8 +20,80 @@ export const gravitationalQuestions = [
       { answerText: "8.314 J/mol·K", isCorrect: false },
     ],
   },
-  // ... additional gravitational questions (total 10)
+  {
+    questionText: "What does the gravitational force between two objects depend on?",
+    answerOptions: [
+      { answerText: "Masses of objects and distance between them", isCorrect: true },
+      { answerText: "Temperature and volume", isCorrect: false },
+      { answerText: "Speed and direction", isCorrect: false },
+      { answerText: "Electric charges", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "Which of the following best describes gravity?",
+    answerOptions: [
+      { answerText: "An attractive force between any two masses", isCorrect: true },
+      { answerText: "A repulsive force between opposite charges", isCorrect: false },
+      { answerText: "A centripetal force acting on satellites", isCorrect: false },
+      { answerText: "A magnetic force", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "What is the acceleration due to gravity on Earth?",
+    answerOptions: [
+      { answerText: "9.8 m/s²", isCorrect: true },
+      { answerText: "6.674 × 10^−11 N·m²/kg²", isCorrect: false },
+      { answerText: "1.6 m/s²", isCorrect: false },
+      { answerText: "3 × 10^8 m/s", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "Which planet has the strongest surface gravity in our solar system?",
+    answerOptions: [
+      { answerText: "Jupiter", isCorrect: true },
+      { answerText: "Earth", isCorrect: false },
+      { answerText: "Mars", isCorrect: false },
+      { answerText: "Venus", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "If the distance between two objects is doubled, the gravitational force becomes:",
+    answerOptions: [
+      { answerText: "One-fourth", isCorrect: true },
+      { answerText: "Double", isCorrect: false },
+      { answerText: "Four times", isCorrect: false },
+      { answerText: "Unchanged", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "What unit is gravitational force measured in?",
+    answerOptions: [
+      { answerText: "Newton (N)", isCorrect: true },
+      { answerText: "Joule (J)", isCorrect: false },
+      { answerText: "Pascal (Pa)", isCorrect: false },
+      { answerText: "Watt (W)", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "What kind of quantity is gravitational force?",
+    answerOptions: [
+      { answerText: "Vector", isCorrect: true },
+      { answerText: "Scalar", isCorrect: false },
+      { answerText: "Tensor", isCorrect: false },
+      { answerText: "Complex", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "Who provided a new explanation of gravity in the general theory of relativity?",
+    answerOptions: [
+      { answerText: "Albert Einstein", isCorrect: true },
+      { answerText: "Isaac Newton", isCorrect: false },
+      { answerText: "Stephen Hawking", isCorrect: false },
+      { answerText: "Marie Curie", isCorrect: false },
+    ],
+  },
 ];
+
 
 export const chemistryQuestions = [
   {

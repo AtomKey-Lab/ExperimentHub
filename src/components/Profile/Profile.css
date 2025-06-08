@@ -231,9 +231,10 @@
   background-color: white;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  padding: 1.75rem;
+  padding:20px;
   margin-top: 1.75rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 500px;
 }
 
 .dashboard__chart:hover {
