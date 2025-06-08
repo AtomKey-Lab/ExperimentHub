@@ -10,8 +10,8 @@ function Footer() {
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-section">
-                    <h4 className='footer-section-h4'>About Virtual Lab</h4>
-                    <p className='footer-section-p'>Virual lab providing interactive simulations for Physics and Chemistry, making science more accessible and fun for students.</p>
+                    <h4 className='footer-section-h4'>About AtomKey Lab</h4>
+                    <p className='footer-section-p'>AtomKey lab providing interactive simulations for Physics and Chemistry, making science more accessible and fun for students.</p>
                 </div>
 
                 <div className="footer-section">
@@ -26,7 +26,7 @@ function Footer() {
                     <h4 className='footer-section-h4'>Quick Links</h4>
                     <ul className='footer-section-ul'>
                         <li><a href="/" className='social-icons-a '>Home</a></li>
-                        <li><a href="/simulations" className='social-icons-a '>Simulations</a></li>
+                        <li><a href="/simulation" className='social-icons-a '>Simulations</a></li>
                         <li><a href="/logbook" className='social-icons-a '>Logbook</a></li>
                         <li><a href="/contact" className='social-icons-a '>Contact</a></li>
                     </ul>
@@ -34,7 +34,7 @@ function Footer() {
 
                 <div className="footer-section">
                     <h4 className='footer-section-h4'>Contact Us</h4>
-                    <p className='footer-section-p'>Email: info@virtuallab.com</p>
+                    <p className='footer-section-p'>Email: info@AtomKey.com</p>
                     <p className='footer-section-p'>Phone: +1 (555) 123-4567</p>
                 </div>
 
