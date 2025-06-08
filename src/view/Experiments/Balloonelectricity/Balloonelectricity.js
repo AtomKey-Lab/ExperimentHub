@@ -14,7 +14,7 @@ function Balloonelectricity() {
         link="https://phet.colorado.edu/sims/html/balloons-and-static-electricity/latest/balloons-and-static-electricity_all.html"
         title="Experiment "
         />
-        hh
+        
       </div>
 
       <Footer />
