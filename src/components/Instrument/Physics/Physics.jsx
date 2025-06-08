@@ -4,15 +4,17 @@ import Navbar from '../../../components/navbar/navbar'
 import Footer from '../../../components/footer/footer'
 
 
+
 function Physics() {
   return (
     <div>
       <div>
       <Navbar/>
+          
       
 
       {/* Three cart items outside the container */}
-      <h1>Physics<span className='Inst'> Instrument </span>Lab</h1>
+      <h1 className='h1'>Physics<span className='Inst'> Instrument </span>Lab</h1>
       <div className="cart-items">
         <div className="cart-item">
           <img 

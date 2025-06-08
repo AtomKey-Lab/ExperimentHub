@@ -4,6 +4,7 @@ import Navbar from '../../navbar/navbar'
 import Footer from '../../footer/footer'
 
 
+
 function Chemisty() {
   return (
     <div>
@@ -12,7 +13,7 @@ function Chemisty() {
       
 
       {/* Three cart items outside the container */}
-      <h1>Chemistry<span className='Inst'> Instrument </span>Lab</h1>
+      <h1 className='h1'>Chemistry<span className='Inst'> Instrument </span>Lab</h1>
       <div className="cart-items">
         <div className="cart-item">
           <img 
