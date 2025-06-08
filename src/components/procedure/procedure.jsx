@@ -47,7 +47,7 @@ function Procedure() {
     experimentData = energyFormChangeProcedureData;
   } else if (path.includes('concentration')) {
     experimentData = concentrationProcedureData;
-  } else if (path.includes('ph')) {
+  } else if (path.includes('pH')) {
     experimentData = pHProcedureData;
   } else if (path.includes('electrolysis')) {
     experimentData = electrolysisProcedureData;
