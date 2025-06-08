@@ -35,7 +35,7 @@ function Footer() {
                 <div className="footer-section">
                     <h4 className='footer-section-h4'>Contact Us</h4>
                     <p className='footer-section-p'>Email: info@AtomKey.com</p>
-                    <p className='footer-section-p'>Phone: +1 (555) 123-4567</p>
+                    <p className='footer-section-p'>Phone:  +91 9876543210</p>
                 </div>
 
                 <div className="footer-section">
